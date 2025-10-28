@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--color-blue: #0154f8;
+	--color-red: #fe014d;
+	--color-background: #f5f7fa;
+	--color-gray: #f3f4f5;
+	--color-gray-1: #ebedf0;
+	--color-gray-2: #dfe0e1;
+	--color-gray-3: #c5c7c9;
+	--color-gray-4: #97989a;
+	--color-gray-5: #676869;
+	--color-gray-6: #1c2329;
+	--header-height: 100px;
+}
+@layer utilities {
+	.transition-300 {
+		@apply transition-all duration-300;
+	}
+
+	.absolute-x {
+		@apply absolute left-1/2 -translate-x-1/2;
+	}
+	.absolute-y {
+		@apply absolute top-1/2 -translate-y-1/2;
+	}
+	.absolute-center {
+		@apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+	}
+
+	.flex-y-center {
+		@apply flex items-center;
+	}
+	.flex-x-center {
+		@apply flex justify-center;
+	}
+	.flex-center {
+		@apply flex items-center justify-center;
+	}
+	.flex-center-between {
+		@apply flex items-center justify-between;
+	}
+	.flex-between {
+		@apply flex justify-between;
+	}
+	.leading-trim-both {
+		-webkit-leading-trim: both;
+		-webkit-text-edge: cap;
+		leading-trim: both;
+		text-edge: cap;
+	}
+}

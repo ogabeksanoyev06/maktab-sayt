@@ -16,9 +16,13 @@ useSeoMeta({
 	description,
 	ogTitle: title,
 	ogDescription: description,
-	ogImage: '',
-	twitterImage: '',
-	twitterCard: 'summary_large_image'
+	ogImage: 'og.png',
+	ogUrl: 'https://qorovulbozor3-maktabbuxoro.vercel.app/',
+	twitterImage: 'og.png',
+	twitterTitle: title,
+	twitterDescription: description,
+	ogType: 'website',
+	ogLocale: 'en_US'
 })
 </script>
 
