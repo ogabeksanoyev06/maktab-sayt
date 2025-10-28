@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@import "../fonts/stylesheet.css";
+@import "./transition.css";
+@import "./common.css";
+
+* {
+	overscroll-behavior-y: none;
+	font-family: "Aeonik Pro", sans-serif !important;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	background-color: #f6f7f8;
+	color: var(--color-foreground);
+}
+
+:root {
+	--spacing: 0.25rem;
+	--ui-container: "1440px";
+	--ui-header-height: calc(var(--spacing) * 20);
+	--ui-radius: 10px;
+}
+
+@theme {
+	--spacing-120: 120%;
+	--spacing-130: 130%;
+	--spacing-140: 140%;
+	--spacing-150: 150%;
+	--spacing-160: 160%;
+
+	--radius: var(--ui-radius);
+
+	--color-background: oklch(98.8% 0.003 260); /* tiniq oq-yumshoq fon */
+	--color-foreground: oklch(23% 0.008 250); /* toza qora emas, yumshoq kulrang matn */
+
+	--color-muted: oklch(95.5% 0.007 255); /* pastel kulrang */
+	--color-muted-foreground: oklch(60% 0.015 255); /* matn uchun engil kontrast */
+
+	--color-popover: oklch(99% 0.002 260);
+	--color-popover-foreground: oklch(25% 0.01 255);
+
+	--color-card: oklch(99% 0.002 260);
+	--color-card-foreground: oklch(24% 0.008 255);
+
+	--color-border: oklch(87% 0.008 255);
+	--color-input: oklch(90% 0.007 255);
+
+	--color-primary: oklch(56% 0.18 265); /* yumshoq ko‘k - “sky/blue-500”ga o‘xshash */
+	--color-primary-foreground: oklch(98.5% 0.002 260); /* oqsimon matn uchun fon */
+
+	--color-secondary: oklch(96% 0.006 255);
+	--color-secondary-foreground: oklch(35% 0.012 255);
+
+	--color-accent: oklch(97.5% 0.008 255);
+	--color-accent-foreground: oklch(30% 0.014 255);
+
+	--color-destructive: oklch(60% 0.23 25); /* yumshoq coral qizil */
+	--color-destructive-foreground: oklch(99% 0.002 260);
+
+	--shadow-card: 0 30px 50px 5px rgba(39, 48, 56, 0.06);
+	--shadow-main:
+		0 3.459px 2.214px 0 #00000003, 0 8.313px 5.32px 0 #00000003, 0 15.652px 10.017px 0 #00000003, 0 27.92px 17.869px 0 #00000005, 0 52.222px 33.422px 0 #00000005,
+		0 125px 80px 0 #00000008;
+
+	--shadow-card-hover: 0 16px 44px rgba(0, 0, 0, 0.14), 0 30px 50px 5px rgba(39, 48, 56, 0.06);
+}
+
+@layer utilities {
+	.container {
+		max-width: 1280px;
+		padding-left: calc(var(--spacing) * 4);
+		padding-right: calc(var(--spacing) * 4);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.transition-300 {
+		@apply transition-all duration-300;
+	}
+	.absolute-x {
+		@apply absolute left-1/2 -translate-x-1/2;
+	}
+	.absolute-y {
+		@apply absolute top-1/2 -translate-y-1/2;
+	}
+	.absolute-center {
+		@apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+	}
+
+	.flex-y-center {
+		@apply flex items-center;
+	}
+	.flex-x-center {
+		@apply flex justify-center;
+	}
+	.flex-center {
+		@apply flex justify-center items-center;
+	}
+	.flex-center-between {
+		@apply flex justify-between items-center;
+	}
+	.flex-between {
+		@apply flex justify-between;
+	}
+}

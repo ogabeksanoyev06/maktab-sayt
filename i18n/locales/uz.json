@@ -1,0 +1,199 @@
+{
+	"news_title": "So‘nggi yangiliklar",
+	"news_subtitle": "Eng so‘nggi yangiliklar va maqolalar bilan tanishing",
+
+	"video_gallery_title": "Videogalereya",
+	"video_gallery_subtitle": "Eng so‘nggi videolar, suhbatlar va lavhalarni tomosha qiling",
+
+	"event_title": "Kutilayotgan tadbirlar",
+	"event_subtitle": "Yaqinlashib kelayotgan tadbirlar va uchrashuvlardan xabardor bo‘ling",
+
+	"webinar_title": "Vebinarlar",
+	"webinar_subtitle": "Soha mutaxassislari bilan jonli vebinarlar va interaktiv sessiyalarda ishtirok eting",
+
+	"stay_in_touch_title": "Bizning <span class='text-gradient'>qiziqarli videolar</span>",
+	"stay_in_touch_subtitle": "Maktabimiz yangiliklari, tadbirlar va o‘quvchilarning yutuqlari haqida xabardor bo‘lib boring.",
+	"stay_in_touch_follow": "Follow",
+
+	"statistics_title": "RAQAMLAR SO‘ZLASIN",
+	"statistics_subtitle": "Bu raqamlar — 3-maktab jamoasining fidoyiligi, o‘quvchilarimiz mehnati va ta’limdagi yutuqlarimiz ifodasidir.",
+
+	"students_count": "Faol o‘quvchilar",
+	"teachers_count": "Tajribali o‘qituvchilar",
+	"olympiad_winners": "Olimpiada g‘oliblari",
+	"graduates_accepted_to_universities": "Oliy ta’limgacha yetgan bitiruvchilar",
+	"parent_satisfaction_rate": "Ota-onalar mamnunligi",
+	"since_established_year": "Faoliyat boshlagan yil",
+	"school_projects_and_clubs": "Maktab loyihalari va to‘garaklar",
+	"district_level_awards": "Tuman miqyosidagi mukofotlar",
+
+	"hero_education_title": "Bilim sari yo‘l shu yerdan boshlanadi",
+	"hero_education_subtitle": "Har bir bola o‘z iste’dodi bilan porlaydigan, mehrga to‘la o‘quv muhitini yaratamiz. Tajribali o‘qituvchilar va zamonaviy uslublar yordamida farzandingizni mustahkam bilim, axloqiy tarbiya va kelajak uchun ishonchli poydevor bilan ta’minlaymiz.",
+	"grades_title_primary": "Boshlang‘ich",
+	"grades_desc_primary": "O‘yin orqali o‘rganish, o‘qishga mehr uyg‘otish va dastlabki bilim poydevorini yaratish.",
+	"grades_class_primary": "1–4 sinflar",
+	"grades_title_middle": "O‘rta bo‘g‘in",
+	"grades_desc_middle": "Mustaqil fikrlash, fan asoslarini o‘zlashtirish va ijtimoiy ko‘nikmalarni rivojlantirish.",
+	"grades_class_middle": "5–8 sinflar",
+	"grades_title_upper": "Yuqori bo‘g‘in",
+	"grades_desc_upper": "Kasb tanlash, imtihonlarga tayyorlanish va kelajak yo‘nalishini shakllantirish.",
+	"grades_class_upper": "9–11 sinflar",
+
+	"students_results_title": "O‘QUVCHILAR <span>NATIJALARI</span>",
+	"students_results_subtitle": "Har bir sertifikat – mehnat, bilim va qat’iyat mevasidir.",
+	"teachers_results_title": "O‘QITUVCHILAR <span>YUTUQLARI</span>",
+	"teachers_results_subtitle": "Ustozlarimiz — farzandlaringiz muvaffaqiyati orqasidagi ilhom manbai.",
+
+	"school_services_title": "QO‘SHIMCHA <span>IMKONIYATLAR</span>",
+	"school_services_subtitle": "Maktabimizda o‘quvchilarning qiziqishlari va iste’dodlarini rivojlantirish uchun turli yo‘nalishlar mavjud.",
+	"school_services": {
+		"clubs": "To‘garaklar va klublar",
+		"clubs_description": "San’at, sport, IT va fan yo‘nalishlaridagi to‘garaklar orqali o‘quvchilar ijodkorlikni rivojlantiradilar.",
+
+		"extra_lessons": "Qo‘shimcha darslar",
+		"extra_lessons_description": "Bilimni mustahkamlash va orqada qolgan mavzularni to‘liq o‘zlashtirish uchun o‘tkaziladigan bepul mashg‘ulotlar.",
+
+		"olympiad": "Olimpiada tayyorlov",
+		"olympiad_description": "Iqtidorli o‘quvchilar uchun maxsus tayyorlov dasturlari, ustozlar nazorati va amaliy mashg‘ulotlar.",
+
+		"events": "Tadbirlar va ekskursiyalar",
+		"events_description": "O‘quvchilar uchun madaniy tadbirlar, ochiq darslar, sayohatlar va maktab hayotini boyituvchi faoliyatlar."
+	},
+	"learn_more": "Batafsil",
+	"contact_section": {
+		"title": "Savolingiz bormi?",
+		"subtitle": "Quyidagi shakl orqali murojaatingizni yuboring — sizga tez orada javob beramiz.",
+
+		"form_name_label": "Ismingiz",
+		"form_name_placeholder": "Ismingizni kiriting",
+
+		"form_phone_label": "Telefon raqamingiz",
+		"form_phone_placeholder": "Telefon raqamingizni kiriting",
+
+		"form_message_label": "Murojaat mazmuni",
+		"form_message_placeholder": "Savolingiz yoki murojaatingizni batafsil yozing...",
+
+		"form_privacy_text": "“Yuborish” tugmasini bosish orqali siz shaxsiy ma’lumotlaringizni qayta ishlashga rozilik bildirasiz.",
+		"form_privacy_link": "Maxfiylik siyosati",
+
+		"form_button_text": "Yuborish"
+	},
+
+	"footer_text": "Har bir o‘quvchini yutuqqa yetaklaymiz",
+	"footer_description": "Bizning maktabda ta’lim jarayoni faqat bilim olish emas — bu o‘sish, ishonch va ilhom yo‘li. \nBoshlang‘ich sinflardan boshlab har bir bosqichda o‘quvchining iste’dodi va qiziqishlariga mos dasturlar orqali uni rivojlantiramiz. \nE’tiborli ustozlar, zamonaviy metodlar va samimiy muhit har bir bolaga o‘z salohiyatini to‘liq namoyon etish imkonini beradi — o‘qishda, hayotda va kelajakda.",
+	"copyright_text": "© {year} “Buxoro viloyati Qorovulbozor tumani 3-maktab”. Biz bilan bilim va kelajak sari!",
+
+	"graduates_testimonials_title": "Bitiruvchilar <span>fikrlari</span>",
+	"graduates_testimonials_subtitle": "Maktabimizni bitirgan o‘quvchilar o‘z tajribalari, ustozlariga minnatdorchiliklari va yodda qolgan onlari bilan o‘rtoqlashadi.",
+
+	"teachers_section_title": "Bizning <span>o'qituvchilar</span>",
+	"teachers_section_subtitle": "Tajriba, mehr-muhabbat va bilim bilan har bir o‘quvchining yuksalishiga hissa qo‘shayotgan ustozlar jamoasi.",
+	"see_all": "Barchasini ko'rish",
+	"btn_more": "Yana yuklash",
+
+	"share": "Ulashish",
+	"copied": "Nusxalandi",
+	"print_out": "Chop etish",
+
+	"image_gallery": {
+		"title": "Maktab hayotining eng yorqin lahzalari",
+		"description": "Bizning galereyamizda o‘quvchilarimizning yutuqlari, tadbirlar va maktab hayotidan unutilmas suratlarni tomosha qiling."
+	},
+	"state_symbols_emblem": "O‘zbekiston Respublikasi <span>Davlat gerbi</span>",
+	"state_symbols_flag": "O‘zbekiston Respublikasi <span>Davlat bayrog‘i</span>",
+	"state_symbols_anthem": "O‘zbekiston Respublikasi <span>Davlat madhiyasi</span>",
+	"achievements_hero": {
+		"title": "Har bir gʻalaba — mehnat, birlik va ilhom natijasi",
+		"subtitle": "Maktabimiz yutuqlari — o‘quvchilarimiz, ustozlarimiz va ota-onalarimizning fidokorona mehnatining ifodasidir. Biz har bir natijadan faxrlanamiz va yanada yuksak marralarni ko‘zlaymiz."
+	},
+
+	"responsibilities_title": "Qorovulbozor tumani 3 - sonli umumiy o‘rta ta’lim muassasasining namunaviy <span>NIZOMI</span>",
+
+	"about_us": {
+		"title1": "Maktab haqida",
+		"desc1": "Qorovulbozor tumani 3-sonli umumiy o‘rta ta’lim maktabi o‘quvchilarga zamonaviy bilim, ko‘nikma va qadriyatlarni singdirishga qaratilgan ilg‘or ta’lim muassasasi hisoblanadi. Maktabda barcha fanlar bo‘yicha malakali o‘qituvchilar faoliyat yuritadi.",
+
+		"title2": "Ta’lim sifati va yutuqlar",
+		"desc2": "Maktab o‘quvchilari tuman va viloyat miqyosidagi fan olimpiadalari, sport musobaqalari hamda madaniy tadbirlarda muntazam yuqori natijalarga erishib kelmoqda. O‘quvchilarning ijodiy fikrlash va ijtimoiy faolligini rivojlantirish asosiy maqsadlardan biridir.",
+
+		"title3": "Zamonaviy sharoitlar",
+		"desc3": "Maktab binosi zamonaviy talablarga mos ravishda jihozlangan: multimedia sinfxonalari, kompyuter xonasi, kutubxona, sport zali va ochiq sport maydonchalari mavjud. O‘quvchilarga qulay va xavfsiz muhit yaratilgan.",
+
+		"title4": "Malakali pedagoglar jamoasi",
+		"desc4": "O‘qituvchilar jamoasi o‘z kasbiga sadoqatli, ilg‘or metodlarni qo‘llaydigan va har bir o‘quvchining individual qobiliyatini rivojlantirishga e’tibor qaratadi. Doimiy ravishda malaka oshirish kurslarida qatnashib, ta’lim sifatini oshirib borishadi.",
+
+		"title5": "Tarbiyaviy ishlar va hamkorlik",
+		"desc5": "Maktabda ma’naviy-ma’rifiy tadbirlar, sport musobaqalari, fan to‘garaklari va sinfdan tashqari mashg‘ulotlar muntazam o‘tkazilib turadi. Ota-onalar, mahalla va hamjamiyat bilan hamkorlikda o‘quvchilar tarbiyasiga alohida e’tibor qaratiladi.",
+
+		"page_title": "Biz haqimizda",
+
+		"intro1": "Qorovulbozor tumani 3-sonli umumiy o‘rta ta’lim maktabi o‘z faoliyatini barkamol avlodni tarbiyalash, o‘quvchilarga zamonaviy bilim va ko‘nikmalarni singdirish, hamda mustaqil fikrlaydigan, vatanparvar yoshlarni voyaga yetkazish maqsadida olib boradi. Maktab ta’lim sifatini oshirish va o‘quvchilarning ijodiy qobiliyatini rivojlantirishni o‘z oldiga ustuvor vazifa qilib qo‘ygan.",
+
+		"intro2": "Maktabda o‘quv-tarbiya jarayonlari Davlat ta’lim standarti asosida tashkil etilgan bo‘lib, har bir fan bo‘yicha malakali pedagoglar jamoasi faoliyat yuritadi. Zamonaviy axborot texnologiyalari, multimedia vositalari va raqamli ta’lim platformalari orqali darslar samaradorligi ta’minlanadi. O‘quvchilar uchun qulay sinfxonalar, kutubxona, sport zali, kompyuter xonasi va to‘garaklar mavjud.",
+
+		"intro3": "Maktab o‘quvchilari tuman, viloyat va respublika miqyosidagi fan olimpiadalari, sport musobaqalari va ijtimoiy loyihalarda muntazam qatnashib, yuqori natijalarga erishib kelmoqda. Shu bilan birga, har yili o‘quvchilarimiz oliy ta’lim muassasalariga muvaffaqiyatli kirib, bilimlarini yangi bosqichda davom ettiradilar.",
+
+		"intro4": "Maktabda ma’naviy-ma’rifiy ishlar, milliy qadriyatlarni singdirish, ekologik madaniyat va fuqarolik mas’uliyatini shakllantirish yo‘nalishlariga alohida e’tibor qaratiladi. Har hafta o‘quvchilar uchun ma’naviyat soatlari, kitobxonlik kechalari, sport tadbirlari va to‘garak mashg‘ulotlari o‘tkaziladi.",
+
+		"intro5": "Maktab rahbariyati, o‘qituvchilar, ota-onalar va mahalla faollari o‘rtasida yaqin hamkorlik yo‘lga qo‘yilgan. Ota-onalar qo‘mitasi orqali ta’lim jarayoniga jamoatchilik nazorati yo‘lga qo‘yilgan bo‘lib, bu maktabdagi ochiqlik va ishonch muhitini ta’minlaydi.",
+
+		"intro6": "Bugungi kunda Qorovulbozor tumani 3-sonli maktab o‘zining intizomli o‘quvchilari, fidoyi ustozlari va jips jamoasi bilan tumandagi ilg‘or ta’lim maskanlaridan biri sifatida tanilgan. Maktab shiori — “Bilim, mehnat va insonparvarlik yo‘lida birlashamiz!”",
+
+		"missions_and_values": "Missiya va qadriyatlar",
+		"green_initiatives": "Yashil maktab"
+	},
+
+	"home": "Bosh sahifa",
+	"director": "Direktor",
+	"management": "Menejerlar va xodimlar",
+	"structure": "Tuzilma",
+	"statute": "Maktab nizomi",
+
+	"opportunities_clubs": "To‘garaklar va klublar",
+	"opportunities_olympiad_prep": "Olimpiada tayyorlov",
+	"opportunities_extra_classes": "Qo'shimcha darslar",
+	"opportunities_events": "Tadbirlar va ekskursiyalar",
+
+	"alumni": "Bitiruvchilar muvaffaqiyatlari",
+	"olympiads": "Olimpiada natijalari",
+
+	"news": "Yangiliklar",
+	"events": "Kutilayotgan tadbirlar",
+	"photo_gallery": "Fotogaleriya",
+	"video_gallery": "Videogalereya",
+
+	"state_emblem": "Davlat gerbi",
+	"state_flag": "Davlat bayrog‘i",
+	"state_anthem": "Davlat madhiyasi",
+
+	"more_btn": "Batafsil",
+
+	"have_questions": "Savollar bormi?",
+	"have_questions_text": "O‘zingizni qiziqtirgan savollar va murojaatlaringiz bo‘lsa biz bilan bog‘laning, mas'ul xodimlarimiz tez orada siz bilan aloqaga chiqadi.",
+	"your_name": "F.I.Sh",
+	"your_name_placeholder": "F.I.Shni to‘liq kiriting",
+	"phone_number": "Telefon raqami",
+	"explain_the_matter": "Savol",
+	"explain_the_matter_placeholder": "Savolingizni qoldiring...",
+	"send_btn": "Yuborish",
+
+	"feedback_management_title": "Fikr-mulohaza boshqaruvi",
+	"feedback_management_welcome": "3-maktabga xush kelibsiz!",
+	"feedback_management_description": "FMS (Fikr-mulohaza boshqaruvi tizimi) — bu 3-maktabning rasmiy tizimi bo‘lib, o‘quvchilar, ota-onalar va o‘qituvchilarning fikr, taklif, shikoyat va e’tirozlarini qabul qilib, ularga javob berish uchun yaratilgan. Sizning har bir fikringiz biz uchun muhim!",
+	"feedback_management_button": "Fikr-mulohaza yuborish",
+
+	"personal_info_title": "Shaxsiy ma'lumotlar",
+	"privacy_notice_heading": "Maxfiyligingizni qadrlaymiz!",
+	"privacy_notice_text": "Zarur bo'lmasa, shaxsiy ma'lumotlaringiz oshkor qilinmaydi. Iltimos, bog'lanish ma'lumotlaringizni to'ldiring, shunda Institut siz bilan bog'lanishi mumkin. Aks holda, fikr-mulohazangiz e'tiborsiz qoladi.",
+	"full_name_label": "Ism (Familiya, Ism va Otaning ismi)",
+	"email_label": "Elektron pochta",
+	"phone_label": "Telefon raqami",
+	"input_placeholder": "Ma'lumot kiriting",
+	"email_placeholder": "Elektron pochtangizni kiriting",
+	"details_label": "Tafsilotlar",
+	"details_placeholder": "Bu yerda tafsilotlarni yozing",
+	"submit_feedback_button": "Fikr-mulohaza yuborish",
+
+	"contact": "Kontakt",
+	"anti_corruption": "Korrupsiyaga qarshi kurash"
+}
