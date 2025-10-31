@@ -5,6 +5,14 @@
 	animation: fade 0.3s ease-in-out reverse;
 }
 
+.fade-sm-enter-active {
+	animation: fade 100ms ease-in;
+}
+
+.fade-sm-leave-active {
+	animation: fade 100ms ease-out reverse;
+}
+
 @keyframes fade {
 	from {
 		opacity: 0;

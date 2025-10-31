@@ -14,7 +14,7 @@ const breadcrumbItems = computed(() => [
 </script>
 
 <template>
-	<div>
+	<div class="pb-8 md:pb-16">
 		<UIBreadcrumb :routes="breadcrumbItems" />
 		<div class="container">
 			<UIImage

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="overflow-hidden">
 		<UIBreadcrumb :routes="breadcrumbItems" />
 		<div class="container pt-5">
 			<div class="mb-6 md:mb-10">

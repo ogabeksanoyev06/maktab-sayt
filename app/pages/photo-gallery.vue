@@ -1,23 +1,22 @@
 <template>
 	<div>
 		<UIBreadcrumb :routes="breadcrumbItems" />
-		<div class="container">
+		<div class="container py-8 md:py-16">
 			<div class="w-full masonry-container">
 				<div class="flex flex-col gap-y-2 items-center justify-center h-full w-full pb-8">
 					<h1 class="font-bold text-3xl">{{ $t('image_gallery.title') }}</h1>
 					<p class="text-base text-muted-foreground">{{ $t('image_gallery.description') }}</p>
 				</div>
-
 				<ul class="grid grid-cols-1 gap-4 lg:block">
 					<li class="relative w-full group masonry-item" v-for="(item, i) in images" :key="i">
 						<UIImage
 							:src="item.image"
 							class="aspect-[4/3] max-h-[300px] h-full w-full rounded"
 							image-class="h-full w-full rounded transition-300 brightness-[.8] hover:brightness-100 will-change-[filter] object-cover"
-							@click="openModal"
+							@click="openModal(i)"
 						/>
 					</li>
-					<CommonModalPhoto :show="show" :images="images" @close="show = false" />
+					<CommonModalPhoto :show="show" :images="images" :active="index" @close="show = false" @change="onSliderChange" />
 				</ul>
 			</div>
 		</div>
@@ -53,8 +52,13 @@ const images = [
 const show = ref(false)
 const index = ref(0)
 
-const openModal = () => {
+const openModal = (i) => {
+	index.value = i
 	show.value = true
+}
+
+const onSliderChange = (newIndex) => {
+	index.value = newIndex
 }
 
 const breadcrumbItems = [
@@ -74,8 +78,6 @@ const breadcrumbItems = [
 		column-fill: balance;
 		-moz-column-gap: 20px;
 		column-gap: 20px;
-		margin: 20px auto 0;
-		padding: 2rem;
 	}
 	.masonry-item {
 		display: inline-block;

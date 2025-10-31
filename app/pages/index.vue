@@ -15,7 +15,9 @@
 			<section-results-pupils />
 			<section-results-teachers />
 			<main-section-other-services />
+			<section-use-ful-links />
 			<common-contact-form />
+			<common-faq />
 		</div>
 		<layout-footer />
 	</div>

@@ -9,8 +9,8 @@
 					</SwiperSlide>
 				</Swiper>
 			</div>
-			<div class="w-full max-w-40 min-h-60 h-full bg-gradient-to-r from-white/70 to-transparent absolute left-0 top-0 hidden md:block z-10"></div>
-			<div class="w-full max-w-40 min-h-60 h-full bg-gradient-to-r from-transparent to-white/70 absolute right-0 top-0 hidden md:block z-10"></div>
+			<div class="w-full max-w-80 min-h-60 h-full bg-gradient-to-r from-white/70 to-transparent absolute left-0 top-0 hidden md:block z-10"></div>
+			<div class="w-full max-w-80 min-h-60 h-full bg-gradient-to-r from-transparent to-white/70 absolute right-0 top-0 hidden md:block z-10"></div>
 			<div class="container bg-transparent absolute-center z-50 h-10 w-full">
 				<div class="slider-button absolute left-4 md:left-2">
 					<button

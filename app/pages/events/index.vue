@@ -9,9 +9,10 @@ const breadcrumbItems = [
 ]
 </script>
 <template>
-	<div>
+	<div class="pb-8 md:pb-16">
 		<UIBreadcrumb :routes="breadcrumbItems" />
-		<div class="container pt-10">
+		<div class="container">
+			<h1 class="title-style mb-2 sm:mb-3 md:mb-6 mt-3">Kutilayotgan tadbirlar</h1>
 			<div class="grid gap-8 md:grid-cols-12">
 				<div class="md:col-span-9">
 					<div class="space-y-6">

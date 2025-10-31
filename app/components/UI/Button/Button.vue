@@ -1,7 +1,7 @@
 <template>
 	<button
 		:class="[
-			'inline-flex items-center justify-center gap-2 rounded border whitespace-nowrap text-base font-medium cursor-pointer transition-all duration-300 active:scale-95 select-none disabled:opacity-60 disabled:cursor-not-allowed',
+			'inline-flex items-center justify-center gap-2 rounded border whitespace-nowrap max-sm:h-9 text-sm sm:text-base font-medium cursor-pointer transition-all duration-300 active:scale-95 select-none disabled:opacity-60 disabled:cursor-not-allowed',
 			sizeClasses,
 			variantClasses,
 			mainClass

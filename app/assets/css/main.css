@@ -33,11 +33,11 @@ body {
 
 	--radius: var(--ui-radius);
 
-	--color-background: oklch(98.8% 0.003 260); /* tiniq oq-yumshoq fon */
-	--color-foreground: oklch(23% 0.008 250); /* toza qora emas, yumshoq kulrang matn */
+	--color-background: oklch(98.8% 0.003 260);
+	--color-foreground: oklch(23% 0.008 250);
 
-	--color-muted: oklch(95.5% 0.007 255); /* pastel kulrang */
-	--color-muted-foreground: oklch(60% 0.015 255); /* matn uchun engil kontrast */
+	--color-muted: oklch(95.5% 0.007 255);
+	--color-muted-foreground: oklch(60% 0.015 255);
 
 	--color-popover: oklch(99% 0.002 260);
 	--color-popover-foreground: oklch(25% 0.01 255);
@@ -45,11 +45,11 @@ body {
 	--color-card: oklch(99% 0.002 260);
 	--color-card-foreground: oklch(24% 0.008 255);
 
-	--color-border: oklch(87% 0.008 255);
-	--color-input: oklch(90% 0.007 255);
+	--color-border: oklch(0.9454 0.0046 258.33);
+	--color-input: oklch(0.9454 0.0046 258.33);
 
-	--color-primary: oklch(56% 0.18 265); /* yumshoq ko‘k - “sky/blue-500”ga o‘xshash */
-	--color-primary-foreground: oklch(98.5% 0.002 260); /* oqsimon matn uchun fon */
+	--color-primary: oklch(0.5248 0.2524 262.55);
+	--color-primary-foreground: oklch(98.5% 0.002 260);
 
 	--color-secondary: oklch(96% 0.006 255);
 	--color-secondary-foreground: oklch(35% 0.012 255);

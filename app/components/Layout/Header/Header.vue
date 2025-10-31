@@ -25,6 +25,8 @@ const theme = computed(() => {
 	else return 'white'
 })
 
+const showMenu = ref(false)
+
 const items = ref<NavigationMenuItem[]>([
 	{
 		label: 'Maktab haqida',
@@ -119,8 +121,10 @@ watch(
 						}"
 					/>
 				</div>
+
 				<div class="flex items-center justify-end gap-1.5">
 					<LayoutHeaderLanguageSwitcher :theme />
+					<LayoutHeaderBurger v-model="showMenu" @click="showMenu = !showMenu" :theme />
 				</div>
 			</div>
 		</header>

@@ -3,7 +3,7 @@
 		<div class="absolute z-2 h-full w-full linear-gradient inset-0 pointer-events-none"></div>
 		<div class="container relative z-1">
 			<Swiper v-bind="settings" class="!overflow-visible z-0">
-				<SwiperSlide v-for="(item, i) in [...items, ...items]" :key="i" class="cursor-pointer relative aspect-[287/332]">
+				<SwiperSlide v-for="(item, i) in [...items, ...items]" :key="i" class="cursor-pointer relative aspect-video sm:!aspect-[287/332]">
 					<div class="w-full h-full overflow-hidden relative">
 						<UIImage :src="item.url" class="w-full h-full object-cover overflow-hidden" v-if="item.media_type === 'image'" />
 						<video v-else :src="item.url" class="w-full h-full object-cover" autoplay loop playsinline />
@@ -13,12 +13,12 @@
 				</SwiperSlide>
 			</Swiper>
 			<button
-				class="slider-gallery-button-prev max-xl:hidden w-8 h-8 lg:w-12 lg:h-12 group rounded-full flex items-center justify-center shrink-0 bg-white border border-gray-200 absolute -translate-y-1/2 top-1/2 left-0 -translate-x-1/2 z-1 cursor-pointer"
+				class="slider-gallery-button-prev max-xl:hidden w-8 h-8 lg:w-12 lg:h-12 group rounded-full flex items-center justify-center shrink-0 bg-white border border-gray-200 absolute -translate-y-1/2 top-1/2 left-0 translate-x-1/2 z-1 cursor-pointer"
 			>
 				<Icon name="lucide:move-left" />
 			</button>
 			<button
-				class="slider-gallery-button-next max-xl:hidden w-8 h-8 lg:w-12 lg:h-12 group rounded-full flex items-center justify-center shrink-0 bg-white border border-gray-200 absolute -translate-y-1/2 top-1/2 right-0 translate-x-1/2 z-1 cursor-pointer"
+				class="slider-gallery-button-next max-xl:hidden w-8 h-8 lg:w-12 lg:h-12 group rounded-full flex items-center justify-center shrink-0 bg-white border border-gray-200 absolute -translate-y-1/2 top-1/2 right-0 -translate-x-1/2 z-1 cursor-pointer"
 			>
 				<Icon name="lucide:move-right" />
 			</button>
@@ -52,9 +52,9 @@ const settings = {
 	modules: [Navigation],
 	breakpoints: {
 		0: {
-			slidesPerView: 1.1,
-			spaceBetween: 8,
-			centeredSlides: false
+			slidesPerView: 1.2,
+			spaceBetween: 12,
+			centeredSlides: true
 		},
 		640: {
 			slidesPerView: 3,

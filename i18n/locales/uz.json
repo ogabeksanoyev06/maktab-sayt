@@ -195,5 +195,24 @@
 	"submit_feedback_button": "Fikr-mulohaza yuborish",
 
 	"contact": "Kontakt",
-	"anti_corruption": "Korrupsiyaga qarshi kurash"
+	"anti_corruption": "Korrupsiyaga qarshi kurash",
+
+	"school": "Maktab",
+	"class": "Sinf",
+	"subject": "Fan",
+	"year": "Yil",
+	"stage": "Bosqich",
+	"place": "O‘rin",
+	"score": "Ball",
+
+	"district": "Tuman bosqichi",
+	"region": "Viloyat bosqichi",
+	"republic": "Respublika bosqichi",
+	"finalist": "Finalchi",
+
+	"no_data": "Hozircha ma'lumot yo‘q",
+	"loading": "Yuklanmoqda...",
+
+	"olympiad_page_title": "Olimpiada natijalari",
+	"olympiad_page_description": "Maktab o‘quvchilarining olimpiadalardagi yutuqlari bilan tanishing. Fan bo‘yicha bosqichlar, o‘rinlar va ballar haqida batafsil ma'lumot."
 }

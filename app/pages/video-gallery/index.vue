@@ -10,7 +10,7 @@ const breadcrumbItems = [
 </script>
 
 <template>
-	<div>
+	<div class="pb-8 md:pb-16">
 		<UIBreadcrumb :routes="breadcrumbItems" />
 		<div class="container">
 			<h1 class="title-style mb-2 sm:mb-3 md:mb-6 mt-3">{{ $t('video_gallery_title') }}</h1>

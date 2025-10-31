@@ -36,6 +36,6 @@ const links = [
 	{ label: 'Fotogalereya', to: localePath('/photo-gallery') },
 	{ label: 'Vebinarlar', to: localePath('/webinars') },
 	{ label: 'Kontaktlar', to: localePath('/contacts') },
-	{ label: 'Yashil Maktab', to: localePath('/green-school') }
+	{ label: 'Yashil Maktab', to: localePath('/about-us/green-initiatives') }
 ]
 </script>

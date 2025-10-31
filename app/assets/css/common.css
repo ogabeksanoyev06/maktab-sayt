@@ -58,10 +58,8 @@
 }
 
 .title-style {
-	font-size: 1.25rem;
+	font-size: 24px;
 	font-weight: 700;
-	line-height: 1.75rem;
-	line-height: normal !important;
 }
 .base-title-style {
 	font-size: 1.125rem;

@@ -9,7 +9,7 @@ interface Props {
 	src: string | undefined
 	alt?: string
 	errorState?: string
-	imageClass?: string
+	imageClass?: string | object
 }
 withDefaults(defineProps<Props>(), {
 	imageClass: '',

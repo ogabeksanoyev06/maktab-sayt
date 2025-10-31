@@ -5,8 +5,7 @@
 		<div class="flex flex-col items-start md:max-w-[380px] w-full">
 			<h3 class="text-2xl md:text-3xl leading-[100%] font-bold text-white mb-3">Alina Bekjanova</h3>
 			<p class="text-sm sm:text-base text-white !leading-140 mb-3 md:mb-6">
-				Tajribali backend mutaxassisi, Python (Django, FastAPI) va Node.js’da 6+ yil ishlagan. Skalalanadigan server tizimlari va ma’lumotlar bazalari bo‘yicha chuqur tajribaga
-				ega.
+				Tajribali backend mutaxassisi, Python (Django, FastAPI) va Node.js’da 6+ yil ishlagan. Skalalanadigan server tizimlari va ma’lumotlar bazalari bo‘yicha chuqur tajribaga ega.
 			</p>
 			<div class="flex items-start flex-wrap gap-x-2 gap-y-2.5">
 				<div class="glass-card px-5 py-2 md:px-6 md:py-2.5 rounded-full" v-for="key in 5" :key>
@@ -14,7 +13,7 @@
 				</div>
 			</div>
 		</div>
-		<img src="/images/teacher.png" alt="" class="md:absolute md:-bottom-10 md:right-6 md:h-auto object-contain z-[-1]" />
+		<img src="/images/teacher.png" alt="" class="md:absolute md:-bottom-10 md:right-6 md:h-auto z-[-1] max-md:max-w-[200px] max-md:mx-auto" />
 	</div>
 </template>
 

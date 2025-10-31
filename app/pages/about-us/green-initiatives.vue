@@ -66,6 +66,37 @@ const iniatives = [
 	}
 ]
 
+const items = [
+	{
+		media_type: 'image',
+		url: '/images/image.jpg'
+	},
+	{
+		media_type: 'image',
+		url: '/images/image.jpg'
+	},
+	{
+		media_type: 'image',
+		url: '/images/image.jpg'
+	},
+	{
+		media_type: 'image',
+		url: '/images/image.jpg'
+	},
+	{
+		media_type: 'image',
+		url: '/images/image.jpg'
+	},
+	{
+		media_type: 'image',
+		url: '/images/image.jpg'
+	},
+	{
+		media_type: 'image',
+		url: '/images/image.jpg'
+	}
+]
+
 const aboutSectionRef = ref(null)
 
 const scrollToAbout = () => {
@@ -114,6 +145,17 @@ const breadcrumbItems = [
 		<h2 class="text-xl md:text-3xl font-medium mb-6">Boshqa yashil kampus tashabbuslari</h2>
 		<div class="grid gap-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 			<AboutCardIniatives v-for="(item, i) in iniatives" :key="i" :item="item" />
+		</div>
+	</section>
+	<section class="bg-white py-8 md:py-16">
+		<h2 class="text-xl md:text-3xl font-medium mb-4 container">Yashil lahzalar</h2>
+		<article class="article container mb-4">
+			Maktabimizning Yashil Kampus tashabbuslari orqali barqarorlikka qanday e’tibor qaratayotganini kashf eting. Quyosh energiyasi va ekologik binolardan tortib, daraxt ekish
+			tadbirlari hamda chiqindilarni kamaytirish tashabbuslarigacha bo‘lgan sa’y-harakatlarimiz ushbu suratlarda aks etgan. Har bir qadamimiz sayyoramizning sog‘lom bo‘lishiga va
+			yanada barqaror jamiyat qurishga hissa qo‘shadi.
+		</article>
+		<div>
+			<SectionGalleryCarousel :items="items" />
 		</div>
 	</section>
 	<SectionNewsCarousel title="Maktabdagi barqarorlik yangiliklari">
