@@ -1,78 +1,148 @@
-<script setup lang="ts">
-import CollapseTransition from '@ivanv/vue-collapse-transition/src/CollapseTransition.vue'
-
+<script setup>
 import { useWindowScroll } from '@vueuse/core'
 
-interface IMenu {
-	title: string
-	front_url?: string
-	children?: IMenu[]
-}
+const props = defineProps({
+	isTransparent: Boolean,
+	menus: Array,
+	info: Object,
+	openMenu: Boolean
+})
 
-interface Props {
-	isTransparent?: boolean
-	menus?: IMenu[]
-	openMenu?: boolean
-}
-
-const props = defineProps<Props>()
-const emit = defineEmits(['open-menu'])
+const emit = defineEmits(['open-menu', 'hover-child'])
 
 const route = useRoute()
 const router = useRouter()
+
 const { y } = useWindowScroll()
 
-// ✅ Transparent on homepage scroll
-const isTransparent = computed(() => props.isTransparent)
-
-// ✅ Desktop mega menu states
-const showChildren = ref(false)
-const activeChild = ref<IMenu[] | null>(null)
-
-// ✅ Mobile full menu (v-model)
 const openMenu = ref(props.openMenu ?? false)
 
 watch(
-	() => props.openMenu,
-	(val) => {
-		openMenu.value = val ?? false
-	}
+	() => openMenu.value,
+	(val) => emit('open-menu', val)
 )
 
-watch(openMenu, (v) => {
-	emit('open-menu', v)
-})
+watch(
+	() => props.openMenu,
+	() => (openMenu.value = props.openMenu ?? false)
+)
 
-// ✅ Hover logic
-const hoverChild = (children?: IMenu[]) => {
-	activeChild.value = children ?? null
-	showChildren.value = !!children
+const showChildren = ref(false)
+const activeChild = ref(null)
+
+function hoverChild(children) {
+	showChildren.value = true
+	activeChild.value = children || null
 }
 
-const unHoverChild = () => {
+function unHoverChild() {
 	showChildren.value = false
 	activeChild.value = null
 }
 
-// ✅ Navigation
-const goToPage = (url?: string) => {
+watch(showChildren, (val) => emit('hover-child', !val))
+
+function goToPage(url) {
 	if (url) router.push(url)
+}
+
+watch(y, () => {
+	unHoverChild()
+})
+
+function beforeEnter(el) {
+	el.style.height = '0'
+	el.style.opacity = '0'
+	el.style.overflow = 'hidden'
+}
+function enter(el) {
+	el.style.transition = 'height 0.3s ease, opacity 0.25s ease'
+	el.style.height = el.scrollHeight + 'px'
+	el.style.opacity = '1'
+}
+function afterEnter(el) {
+	el.style.height = 'auto'
+	el.style.opacity = '1'
+	el.style.overflow = ''
+}
+function beforeLeave(el) {
+	el.style.height = el.scrollHeight + 'px'
+	el.style.opacity = '1'
+	el.style.overflow = 'hidden'
+}
+function leave(el) {
+	el.style.transition = 'height 0.3s ease, opacity 0.2s ease'
+	requestAnimationFrame(() => {
+		el.style.height = '0'
+		el.style.opacity = '0'
+	})
+}
+function afterLeave(el) {
+	el.style.height = '0'
+	el.style.opacity = '0'
+	el.style.overflow = ''
 }
 </script>
 
 <template>
-	<header class="header-shadow duration-300 transition-300" :class="isTransparent ? 'bg-transparent' : 'bg-white'">
-		<main class="container flex-between max-lg:items-center lg:block">
-			<nav class="py-4 flex gap-2 items-center">
-				<nav class="ml-16">
-					<div class="relative max-md:overflow-hidden">
-						<div class="!-bottom-[18px] z-50 rounded-[10px] !hidden transition-all duration-200 absolute h-0.5 bg-red -translate-y-1/2 rounded-t-lg"></div>
-					</div>
-				</nav>
-			</nav>
+	<header @mouseleave="unHoverChild" class="transition-300" :class="[showChildren ? '!bg-white' : '', y > 100 ? 'bg-white' : 'header-shadow']">
+		<main class="container">
+			<div class="flex items-center justify-between w-full transition-300" :class="y > 100 ? 'py-2' : 'py-4'">
+				<NuxtLink to="/">
+					<Transition name="fade-sm" mode="out-in">
+						<img :key="isTransparent" class="h-12" :src="`/svg/logo/${y > 100 || showChildren ? 'multicolor' : isTransparent ? 'white' : 'multicolor'}.svg`" alt="Logo" />
+					</Transition>
+				</NuxtLink>
+				<div class="hidden lg:flex relative">
+					<nav class="flex gap-3 items-center w-full justify-center">
+						<button
+							v-for="(item, i) in menus"
+							:key="i"
+							class="flex-y-center gap-1.5 text-sm cursor-pointer font-medium leading-130 transition-300 relative"
+							:class="[y > 100 || showChildren ? 'text-foreground' : isTransparent ? 'text-white' : 'text-foreground', activeChild?.label === item.label && '']"
+							@mouseenter="hoverChild(item)"
+							@click="goToPage(item?.front_url)"
+						>
+							{{ item.label }}
+							<Icon name="lucide:chevron-down" class="transition-300" :class="activeChild?.label === item.label ? 'rotate-180' : ''" />
+						</button>
+					</nav>
+				</div>
+				<div class="flex items-center gap-1.5">
+					<LayoutHeaderLanguageSwitcher isTransparent />
+				</div>
+			</div>
+			<transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave" @after-leave="afterLeave">
+				<section v-if="showChildren">
+					<div class="w-full h-[1px] bg-gray-200"></div>
+					<section class="pb-7 pt-6 grid grid-cols-1">
+						<div class="grid items-start grid-cols-2 col-span-2">
+							<h1 class="col-span-2 text-dark text-2xl font-[800] mb-4">{{ activeChild.label }}</h1>
+							<ul class="grid grid-cols-2 gap-x-5 gap-y-3 w-full">
+								<li v-for="(i, idx) in activeChild?.children" :key="idx">
+									<NuxtLinkLocale
+										class="group transition-300 bg-white border border-[#EBEDF0] rounded py-2.5 px-3 flex-between hover:shadow-[0_30px_50px_10px_rgba(39,48,56,0.11)] cursor-pointer"
+									>
+										<span class="text-sm font-medium">{{ i?.label }} </span>
+										<Icon name="lucide:arrow-right" class="transition-300 opacity-0 group-hover:opacity-100 group-hover:text-primary group-hover:translate-x-1" />
+									</NuxtLinkLocale>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+			</transition>
 		</main>
-		<nav class="pt-3 pb-4 duration-200 lg:hidden">
-			<div class="container flex items-center justify-between h-10"></div>
-		</nav>
 	</header>
 </template>
+
+<style scoped>
+.header-shadow {
+	-webkit-backdrop-filter: blur(26px);
+	backdrop-filter: blur(26px);
+	background: #ffffff1a;
+	box-shadow: 0 4px 64px #00000014;
+	position: relative;
+	z-index: 10;
+}
+</style>

@@ -1,21 +1,24 @@
 <template>
 	<UIDropdown
 		:show="showDropdown"
-		:head-class="['max-sm:border border-border h-9 max-sm:p-1.5 rounded-xl cursor-pointer flex items-center', isTransparent ? '' : '']"
+		:head-class="[
+			'sm:px-4 py-3 flex items-center gap-2 text-sm font-medium leading-130 font-normal transition-300 cursor-pointer text-white border-white/10 lg:hover:bg-white/10',
+			isTransparent ? '' : ''
+		]"
 		:body-class="['!min-w-[160px]', isTransparent ? '!bg-black' : '!bg-white']"
 		@toggle="handleDropdownToggle"
 	>
-		<!-- HEAD -->
 		<template #head>
-			<img :src="currentLanguage?.flag" alt="" class="size-6" />
-			<span class="mr-1.5 ml-1 text-sm leading-[100%] font-bold uppercase" :class="isTransparent ? 'text-white' : 'text-gray-6'">
-				{{ currentLanguage?.code }}
-			</span>
+			<div class="flex-y-center">
+				<Icon name="lucide:globe" :class="isTransparent ? 'bg-black' : 'bg-white'" />
+				<span class="text-white hidden sm:inline-block ml-2 mr-1 text-sm font-semibold cursor-pointer" :class="isTransparent ? 'text-white' : 'text-gray-6'">
+					{{ currentLanguage?.name }}
+				</span>
 
-			<Icon name="lucide-chevron-down" :class="['transition-300', { 'rotate-180': showDropdown }, isTransparent ? 'text-white' : 'text-gray-6']" />
+				<Icon name="lucide-chevron-down" :class="['transition-300', { 'rotate-180': showDropdown }, isTransparent ? 'text-white' : 'text-gray-6']" />
+			</div>
 		</template>
 
-		<!-- BODY -->
 		<template #body>
 			<div v-for="(lang, index) in languagesList" :key="index" class="w-full group border-b border-border/30 last:border-none">
 				<div
