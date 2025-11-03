@@ -1,11 +1,11 @@
 <template>
 	<div id="main-header" class="w-full !fixed top-0 z-50">
 		<div></div>
-		<LayoutHeaderMid :menus="items"  isTransparent/>
+		<LayoutHeaderMid :menus="items"  :isTransparent="isTransparent"/>
 	</div>
 </template>
 
-<script setup>
+<script setup >
 const items = [
 	{
 		label: 'Maktab haqida',
@@ -57,4 +57,7 @@ const items = [
 		]
 	}
 ]
+ defineProps({
+	isTransparent: Boolean
+})
 </script>

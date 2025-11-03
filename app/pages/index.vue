@@ -1,7 +1,8 @@
 <template>
 	<div>
-		<layout-header color="transparent" />
+		<LayoutHeader :isTransparent="true" />
 		<div class="space-y-10">
+
 			<main-section-hero-banner />
 			<main-section-news />
 			<main-section-videogallery />
@@ -19,7 +20,7 @@
 			<common-contact-form />
 			<common-faq />
 		</div>
-		<layout-footer />
+		<LayoutFooter />
 	</div>
 </template>
 

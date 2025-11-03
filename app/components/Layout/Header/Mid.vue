@@ -42,9 +42,7 @@ function unHoverChild() {
 
 watch(showChildren, (val) => emit('hover-child', !val))
 
-function goToPage(url) {
-	if (url) router.push(url)
-}
+
 
 watch(y, () => {
 	unHoverChild()
@@ -85,7 +83,12 @@ function afterLeave(el) {
 </script>
 
 <template>
-	<header @mouseleave="unHoverChild" class="transition-300" :class="[showChildren ? '!bg-white' : '', y > 100 ? 'bg-white' : 'header-shadow']">
+	<header @mouseleave="unHoverChild" class="transition-300" :class="[
+		showChildren && '!bg-white !header-shadow',
+		!isTransparent && '!bg-white',
+		isTransparent && y > 80 && '!bg-white',
+		(isTransparent || (!isTransparent && y > 100)) && 'header-shadow'
+	]">
 		<main class="container">
 			<div class="flex items-center justify-between w-full transition-300" :class="y > 100 ? 'py-2' : 'py-4'">
 				<NuxtLink to="/">
@@ -101,7 +104,6 @@ function afterLeave(el) {
 							class="flex-y-center gap-1.5 text-sm cursor-pointer font-medium leading-130 transition-300 relative"
 							:class="[y > 100 || showChildren ? 'text-foreground' : isTransparent ? 'text-white' : 'text-foreground', activeChild?.label === item.label && '']"
 							@mouseenter="hoverChild(item)"
-							@click="goToPage(item?.front_url)"
 						>
 							{{ item.label }}
 							<Icon name="lucide:chevron-down" class="transition-300" :class="activeChild?.label === item.label ? 'rotate-180' : ''" />
@@ -109,7 +111,7 @@ function afterLeave(el) {
 					</nav>
 				</div>
 				<div class="flex items-center gap-1.5">
-					<LayoutHeaderLanguageSwitcher isTransparent />
+					<LayoutHeaderLanguageSwitcher :isTransparent="isTransparent" :show-children="showChildren" />
 				</div>
 			</div>
 			<transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave" @after-leave="afterLeave">
@@ -121,6 +123,7 @@ function afterLeave(el) {
 							<ul class="grid grid-cols-2 gap-x-5 gap-y-3 w-full">
 								<li v-for="(i, idx) in activeChild?.children" :key="idx">
 									<NuxtLinkLocale
+									:to='i.to'
 										class="group transition-300 bg-white border border-[#EBEDF0] rounded py-2.5 px-3 flex-between hover:shadow-[0_30px_50px_10px_rgba(39,48,56,0.11)] cursor-pointer"
 									>
 										<span class="text-sm font-medium">{{ i?.label }} </span>
