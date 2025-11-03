@@ -12,11 +12,17 @@ defineProps({
 	isTransparent: Boolean
 })
 
-const fullMenu = ref(true)
+const route = useRoute()
+
+const fullMenu = ref(false)
 
 function openMenu(value) {
 	fullMenu.value = value
 }
+
+watch(route, () => {
+	fullMenu.value = false
+})
 
 watch(
 	fullMenu,

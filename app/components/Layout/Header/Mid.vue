@@ -37,8 +37,6 @@ function unHoverChild() {
 	activeChild.value = null
 }
 
-watch(showChildren, (val) => emit('hover-child', !val))
-
 watch(y, () => {
 	unHoverChild()
 })
@@ -85,12 +83,11 @@ function afterLeave(el) {
 			showChildren && '!bg-white !header-shadow',
 			!isTransparent && '!bg-white',
 			isTransparent && y > 80 && '!bg-white',
-			(isTransparent || (!isTransparent && y > 80)) && 'header-shadow',
-			y > 80 ? 'h-16' : 'h-20'
+			(isTransparent || (!isTransparent && y > 80)) && 'header-shadow'
 		]"
 	>
 		<main class="container">
-			<div class="flex items-center justify-between w-full transition-300">
+			<div class="flex items-center justify-between w-full transition-300" :class="[y > 80 ? 'h-16' : 'h-20']">
 				<LayoutHeaderBurger v-model="openMenu" :isTransparent="isTransparent" />
 				<NuxtLink to="/">
 					<Transition name="fade-sm" mode="out-in">
