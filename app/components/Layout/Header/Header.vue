@@ -1,11 +1,35 @@
 <template>
 	<div id="main-header" class="w-full !fixed top-0 z-50">
-		<div></div>
-		<LayoutHeaderMid :menus="items"  :isTransparent="isTransparent"/>
+		<LayoutHeaderMid :menus="items" :openMenu="fullMenu" @open-menu="openMenu" :isTransparent="isTransparent" />
+		<transition name="reverse-menu">
+			<LayoutHeaderFullMenu v-if="fullMenu" :menus="items" :is-full-menu="fullMenu" />
+		</transition>
 	</div>
 </template>
 
-<script setup >
+<script setup>
+defineProps({
+	isTransparent: Boolean
+})
+
+const fullMenu = ref(true)
+
+function openMenu(value) {
+	fullMenu.value = value
+}
+
+watch(
+	fullMenu,
+	(val) => {
+		if (val) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = 'auto'
+		}
+	},
+	{ deep: true }
+)
+
 const items = [
 	{
 		label: 'Maktab haqida',
@@ -57,7 +81,4 @@ const items = [
 		]
 	}
 ]
- defineProps({
-	isTransparent: Boolean
-})
 </script>

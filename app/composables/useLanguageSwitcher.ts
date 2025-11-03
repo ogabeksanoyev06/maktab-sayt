@@ -7,19 +7,27 @@ export const useLanguageSwitcher = () => {
 
 	const cookieLocale = useCookie<LocaleCode>('i18n_redirected')
 
-	const languagesList: { name: string; code: LocaleCode; flag: string }[] = [
+	const languagesList: {
+		name: string
+		short: string
+		code: LocaleCode
+		flag: string
+	}[] = [
 		{
 			name: "O'zbekcha",
+			short: 'Oʻz',
 			code: 'uz',
 			flag: '/svg/flags/uz.svg'
 		},
 		{
 			name: 'English',
+			short: 'En',
 			code: 'en',
 			flag: '/svg/flags/en.svg'
 		},
 		{
 			name: 'Русский',
+			short: 'Ru',
 			code: 'ru',
 			flag: '/svg/flags/ru.svg'
 		}

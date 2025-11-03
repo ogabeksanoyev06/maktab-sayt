@@ -97,3 +97,18 @@
 .carousel-track:hover {
 	animation-play-state: paused;
 }
+
+@keyframes reverse-menu {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+.reverse-menu-enter-active {
+	animation: reverse-menu 0.3s ease-in-out;
+}
+.reverse-menu-leave-active {
+	animation: reverse-menu 0.3s ease-in-out reverse;
+}

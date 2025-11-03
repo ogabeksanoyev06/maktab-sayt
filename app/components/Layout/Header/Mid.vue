@@ -8,10 +8,7 @@ const props = defineProps({
 	openMenu: Boolean
 })
 
-const emit = defineEmits(['open-menu', 'hover-child'])
-
-const route = useRoute()
-const router = useRouter()
+const emit = defineEmits(['open-menu'])
 
 const { y } = useWindowScroll()
 
@@ -41,8 +38,6 @@ function unHoverChild() {
 }
 
 watch(showChildren, (val) => emit('hover-child', !val))
-
-
 
 watch(y, () => {
 	unHoverChild()
@@ -83,17 +78,28 @@ function afterLeave(el) {
 </script>
 
 <template>
-	<header @mouseleave="unHoverChild" class="transition-300" :class="[
-		showChildren && '!bg-white !header-shadow',
-		!isTransparent && '!bg-white',
-		isTransparent && y > 80 && '!bg-white',
-		(isTransparent || (!isTransparent && y > 100)) && 'header-shadow'
-	]">
+	<header
+		@mouseleave="unHoverChild"
+		class="transition-300 flex-y-center"
+		:class="[
+			showChildren && '!bg-white !header-shadow',
+			!isTransparent && '!bg-white',
+			isTransparent && y > 80 && '!bg-white',
+			(isTransparent || (!isTransparent && y > 80)) && 'header-shadow',
+			y > 80 ? 'h-16' : 'h-20'
+		]"
+	>
 		<main class="container">
-			<div class="flex items-center justify-between w-full transition-300" :class="y > 100 ? 'py-2' : 'py-4'">
+			<div class="flex items-center justify-between w-full transition-300">
+				<LayoutHeaderBurger v-model="openMenu" :isTransparent="isTransparent" />
 				<NuxtLink to="/">
 					<Transition name="fade-sm" mode="out-in">
-						<img :key="isTransparent" class="h-12" :src="`/svg/logo/${y > 100 || showChildren ? 'multicolor' : isTransparent ? 'white' : 'multicolor'}.svg`" alt="Logo" />
+						<img
+							:key="isTransparent"
+							class="h-10 lg:h-12 object-cover"
+							:src="`/svg/logo/${y > 80 || showChildren ? 'multicolor' : isTransparent ? 'white' : 'multicolor'}.svg`"
+							alt="Logo"
+						/>
 					</Transition>
 				</NuxtLink>
 				<div class="hidden lg:flex relative">
@@ -102,7 +108,7 @@ function afterLeave(el) {
 							v-for="(item, i) in menus"
 							:key="i"
 							class="flex-y-center gap-1.5 text-sm cursor-pointer font-medium leading-130 transition-300 relative"
-							:class="[y > 100 || showChildren ? 'text-foreground' : isTransparent ? 'text-white' : 'text-foreground', activeChild?.label === item.label && '']"
+							:class="[y > 80 || showChildren ? 'text-foreground' : isTransparent ? 'text-white' : 'text-foreground', activeChild?.label === item.label && '']"
 							@mouseenter="hoverChild(item)"
 						>
 							{{ item.label }}
@@ -123,7 +129,7 @@ function afterLeave(el) {
 							<ul class="grid grid-cols-2 gap-x-5 gap-y-3 w-full">
 								<li v-for="(i, idx) in activeChild?.children" :key="idx">
 									<NuxtLinkLocale
-									:to='i.to'
+										:to="i.to"
 										class="group transition-300 bg-white border border-[#EBEDF0] rounded py-2.5 px-3 flex-between hover:shadow-[0_30px_50px_10px_rgba(39,48,56,0.11)] cursor-pointer"
 									>
 										<span class="text-sm font-medium">{{ i?.label }} </span>
