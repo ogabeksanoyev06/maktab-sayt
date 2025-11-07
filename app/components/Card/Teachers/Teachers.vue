@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="p-5 max-md:!pb-0 md:p-10 rounded-lg md:rounded-[50px] w-full relative min-h-[368px] z-10 overflow-hidden flex flex-col justify-between gap-4 transition-300 bg-[linear-gradient(296deg,_#0154f8_0%,_#013192_100%)] hover:bg-[linear-gradient(26deg,_#0154f8_0%,_#013192_100%)]"
+		class="p-5 max-md:!pb-0 md:p-10 rounded-xl md:rounded-[50px] w-full relative min-h-[368px] z-10 overflow-hidden flex flex-col justify-between gap-4 transition-300 bg-[linear-gradient(296deg,_#0154f8_0%,_#013192_100%)] hover:bg-[linear-gradient(26deg,_#0154f8_0%,_#013192_100%)]"
 	>
 		<div class="flex flex-col items-start md:max-w-[380px] w-full">
 			<h3 class="text-2xl md:text-3xl leading-[100%] font-bold text-white mb-3">Alina Bekjanova</h3>

@@ -60,28 +60,28 @@ const items = computed(() => [
 	}
 ])
 
-const silder_items = [
-	{
-		media_type: 'image',
-		url: 'https://tmci.uz/files/common/awardsslideritem/Image-2024-09-12_091809.png'
-	},
-	{
-		media_type: 'image',
-		url: 'https://tmci.uz/files/common/awardsslideritem/Image-1-2024-09-12_091809.png'
-	},
-	{
-		media_type: 'video',
-		url: 'https://tmci.uz/files/common/awardsslideritem/TMC-2024-09-12_091809.mp4'
-	},
-	{
-		media_type: 'image',
-		url: 'https://tmci.uz/files/common/awardsslideritem/Image-2-2024-09-12_091809.png'
-	},
-	{
-		media_type: 'image',
-		url: 'https://tmci.uz/files/common/awardsslideritem/Image-3-2024-09-12_091809.png'
-	}
-]
+// const silder_items = [
+// 	{
+// 		media_type: 'image',
+// 		url: 'https://tmci.uz/files/common/awardsslideritem/Image-2024-09-12_091809.png'
+// 	},
+// 	{
+// 		media_type: 'image',
+// 		url: 'https://tmci.uz/files/common/awardsslideritem/Image-1-2024-09-12_091809.png'
+// 	},
+// 	{
+// 		media_type: 'video',
+// 		url: 'https://tmci.uz/files/common/awardsslideritem/TMC-2024-09-12_091809.mp4'
+// 	},
+// 	{
+// 		media_type: 'image',
+// 		url: 'https://tmci.uz/files/common/awardsslideritem/Image-2-2024-09-12_091809.png'
+// 	},
+// 	{
+// 		media_type: 'image',
+// 		url: 'https://tmci.uz/files/common/awardsslideritem/Image-3-2024-09-12_091809.png'
+// 	}
+// ]
 
 const breadcrumbItems = [
 	{

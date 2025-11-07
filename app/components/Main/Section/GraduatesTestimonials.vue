@@ -1,8 +1,15 @@
 <template>
-	<section class="py-8 md:py-16 overflow-hidden">
+	<section ref="sectionRef" class="py-8 md:py-16 overflow-hidden">
 		<div class="container">
-			<common-section-wrapper class="mb-4 md:mb-8" :title="$t('graduates_testimonials_title')" :subtitle="$t('graduates_testimonials_subtitle')" highlighted-title :actions="false" />
-			<div class="relative z-20">
+			<common-section-wrapper
+				class="mb-4 md:mb-8 text-animate"
+				:title="$t('graduates_testimonials_title')"
+				:subtitle="$t('graduates_testimonials_subtitle')"
+				highlighted-title
+				:actions="false"
+				:class="{ 'animate-in': isVisible }"
+			/>
+			<div class="relative z-20 slide-in-bottom" :class="{ 'animate-in': isVisible }">
 				<Swiper v-bind="settings" class="md:!overflow-visible" @slideChange="onSlideChange" @swiper="onSwiper">
 					<SwiperSlide
 						v-for="(item, key) in 5"
@@ -39,6 +46,12 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import { Navigation, Autoplay } from 'swiper/modules'
+
+const { elementRef: sectionRef, isVisible } = useScrollAnimation({
+	threshold: 0.15,
+	rootMargin: '0px 0px -80px 0px',
+	triggerOnce: true
+})
 
 const activeIndex = ref(0)
 const swiperRef = ref(null)

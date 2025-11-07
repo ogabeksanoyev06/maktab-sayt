@@ -7,7 +7,7 @@
 				alt="The Benefits of Meditation"
 				class="w-full h-full"
 				image-class="transform transition-transform duration-300 group-hover:scale-110"
-				src="https://tmci.uz/files/cache/af/ca/afca06d0146472bad811dec2e5ada51c.jpg"
+				src="/images/user.png"
 			/>
 			<button
 				class="absolute z-1 w-14 h-14 rounded-full cursor-pointer backdrop-blur flex items-center justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:bg-white transition-300"

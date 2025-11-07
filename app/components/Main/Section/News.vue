@@ -1,17 +1,40 @@
 <script setup lang="ts">
+import { useScrollAnimation, useStaggeredScrollAnimation } from '~/composables/useScrollAnimation'
+
 const filters = ['Yangiliklar', "E'lonlar", 'Maktab hayoti', 'Yutuqlar', 'To‘garaklar', 'Sport', "San'at"]
 const activeFilter = ref(0)
 
 const handleFilter = (filter: number) => {
 	activeFilter.value = filter
 }
+
+const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({
+	threshold: 0.1,
+	rootMargin: '0px 0px -100px 0px',
+	triggerOnce: true
+})
+const { elementRef: filterRef, isVisible: filterVisible } = useScrollAnimation({
+	threshold: 0.1,
+	rootMargin: '0px 0px -100px 0px',
+	triggerOnce: true
+})
+
+const { containerRef: cardsRef } = useStaggeredScrollAnimation({
+	threshold: 0.1,
+	rootMargin: '0px 0px 0px 0px',
+	triggerOnce: true,
+	staggerDelay: 80,
+	childSelector: '.slide-in-bottom'
+})
 </script>
 
 <template>
-	<section>
+	<section ref="sectionRef" class="scroll-animate" :class="{ 'animate-in': sectionVisible }">
 		<div class="container">
-			<common-section-wrapper class="mb-4 md:mb-8" :title="$t('news_title')" :subtitle="$t('news_subtitle')" linkTo="/news" />
-			<div class="mb-4 md:mb-8 overflow-x-auto" style="scrollbar-width: none">
+			<common-section-wrapper class="mb-4 md:mb-8 text-animate" :class="{ 'animate-in': sectionVisible }" :title="$t('news_title')" :subtitle="$t('news_subtitle')" linkTo="/news" />
+
+			<!-- Filter Buttons -->
+			<div ref="filterRef" class="mb-4 md:mb-8 overflow-x-auto fade-in-up" :class="{ 'animate-in': filterVisible }" style="scrollbar-width: none">
 				<div class="flex items-center gap-3 w-max px-1.5">
 					<button
 						v-for="(filter, i) in filters"
@@ -25,8 +48,9 @@ const handleFilter = (filter: number) => {
 					</button>
 				</div>
 			</div>
-			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-				<card-news v-for="key in 4" :key />
+
+			<div ref="cardsRef" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+				<card-news v-for="key in 4" :key="key" class="slide-in-bottom" />
 			</div>
 		</div>
 	</section>

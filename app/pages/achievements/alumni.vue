@@ -24,37 +24,37 @@ const alumni = [
 		bio: 'Odiljon Sanoyev — raqamli mahsulotlar dizaynida tajribali mutaxassis. Mobil va web platformalar uchun intuitiv va vizual jozibador interfeyslar yaratishda mahoratli. Hozirda Lead Designer/ UI/UX Designer rolida faoliyat yuritib, mahsulot dizayn jarayonining boshlang‘ich kontseptsiyasidan tortib foydalanuvchi tajribasining oxirgi bosqichigacha bo‘lgan barcha bosqichlari bilan ishlaydi. “Dizayn — bu chalkashlikni bartaraf etish va mazmunli tajriba yaratish” deb hisoblaydi. Innovatsion uslublar, 3D dizayn elementlari va fintech jihatdan qiziqarli loyihalar bilan shug‘ullanadi. Katta jamoalarda va mahsulot guruhlarida ham samarali ishlay oladi, foydalanuvchi ehtiyojlarini chuqur tushunadi va biznes maqsadlari bilan uyg‘un dizayn echimlarini taklif qiladi.'
 	},
 	{
-		photo: '/img/user2.jpg',
+		photo: '/images/user-student.webp',
 		name: 'Madina Xolmurodova',
 		bio: 'IT sohasi bo‘yicha xalqaro kompaniyada dasturchi bo‘lib ishlaydi.'
 	},
 	{
-		photo: '/img/user3.jpg',
+		photo: '/images/user-student.webp',
 		name: 'Azamat Qurbonov',
 		bio: 'Tibbiyot fakulteti bitiruvchisi, shifokor bo‘lib faoliyat yuritmoqda.'
 	},
 	{
-		photo: '/img/user4.jpg',
+		photo: '/images/user-student.webp',
 		name: 'Dilnoza Abdurahmonova',
 		bio: 'Pedagogika universitetidan tashqari, chet elda ham malaka oshirgan.'
 	},
 	{
-		photo: '/img/user5.jpg',
+		photo: '/images/user-student.webp',
 		name: 'Akbarxon Karimov',
 		bio: 'Harbiy xizmatni o‘tagan, hozirda davlat xavfsizlik tizimida ishlaydi.'
 	},
 	{
-		photo: '/img/user6.jpg',
+		photo: '/images/user-student.webp',
 		name: 'Ziyoda Abdullayeva',
 		bio: 'Marketing bo‘yicha mutaxassis, yirik kompaniyada ishlaydi va blogerlik ham qiladi.'
 	},
 	{
-		photo: '/img/user7.jpg',
+		photo: '/images/user-student.webp',
 		name: 'Shahboz Jo‘rayev',
 		bio: 'Sport yo‘nalishida xalqaro musobaqalar sovrindori, murabbiy sifatida faoliyat yuritmoqda.'
 	},
 	{
-		photo: '/img/user8.jpg',
+		photo: '/images/user-student.webp',
 		name: 'Laylo Shodmonova',
 		bio: 'Moliya sohasida ekspert, xalqaro kompaniyada ishlaydi.'
 	}

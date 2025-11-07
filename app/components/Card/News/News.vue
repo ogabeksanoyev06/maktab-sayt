@@ -2,14 +2,14 @@
 
 <template>
 	<NuxtLinkLocale
-		to="/news/slug"
+		to="/news/1"
 		class="relative group rounded border-default overflow-hidden flex flex-col items-start transition-all duration-300 shadow-card hover:shadow-card-hover"
 	>
 		<UIImage
 			alt="The Benefits of Meditation"
 			class="min-w-[124px] w-full md:max-w-auto min-h-auto md:min-w-[281px] md:min-h-[188px] aspect-[281/188] object-cover"
 			image-class="transform transition-transform duration-300  group-hover:scale-110"
-			src="https://tmci.uz/files/cache/af/ca/afca06d0146472bad811dec2e5ada51c.jpg"
+			src="/images/image.jpg"
 		/>
 		<div class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
 			<div class="flex items-center gap-2 mb-2">

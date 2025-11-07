@@ -13,7 +13,7 @@ const breadcrumbItems = [
 	<div class="pb-8 md:pb-16">
 		<UIBreadcrumb :routes="breadcrumbItems" />
 		<div class="container">
-			<h1 class="title-style mb-2 sm:mb-3 md:mb-6 mt-3">Yangiliklar</h1>
+			<h1 class="title-style mb-2 sm:mb-3 md:mb-6 mt-3">{{ $t('news') }}</h1>
 			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5">
 				<CardNews v-for="key in 8" :key />
 			</div>

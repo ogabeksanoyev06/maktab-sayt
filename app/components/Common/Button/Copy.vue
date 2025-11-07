@@ -17,10 +17,8 @@
 </template>
 
 <script setup lang="ts">
-const link = ref('')
-if (process.client) {
-	link.value = window?.location?.href
-}
+const url = useRequestURL()
+const link = computed(() => url.href)
 const show = ref<boolean>(false)
 
 function copy(text: string) {

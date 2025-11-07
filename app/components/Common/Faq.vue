@@ -6,7 +6,7 @@
 				Izlayotgan narsangizni topa olmadingizmi? Savollaringiz bo'lsa, eng ko'p beriladigan savollardan javoblarni toping.
 			</p>
 			<div class="!w-full max-w-screen-md">
-				<UIAccordion :accordion-items="accordionItems" />
+				<!-- <UIAccordion></UIAccordion> -->
 			</div>
 		</div>
 	</section>

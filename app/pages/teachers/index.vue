@@ -1,13 +1,13 @@
 <template>
-	<div class="pt-[90px] bg-black">
-		<LayoutHeader color="dark" />
-		<div class="container py-8 md:py-16">
+	<div>
+		<UIBreadcrumb :routes="breadcrumbItems" />
+		<div class="container">
 			<common-section-wrapper
-				class="mb-6 md:mb-10"
+				class="mb-6 md:mb-10 pt-6 md:pt-8"
 				:title="$t('teachers_section_title')"
 				highlighted-title
 				wrapperClass="!items-center !text-center"
-				title-class="text-white text-center"
+				title-class="text-center"
 				:actions="false"
 			/>
 			<div class="grid md:grid-cols-2 gap-6">
@@ -18,12 +18,16 @@
 				<UIButton :text="$t('btn_more')" icon="lucide-arrow-down" />
 			</div>
 		</div>
-		<LayoutFooter />
 	</div>
 </template>
 
 <script setup>
-definePageMeta({
-	layout: 'empty'
-})
+const { t } = useI18n()
+
+const breadcrumbItems = [
+	{
+		name: "Bizning o'qituvchilar",
+		path: ''
+	}
+]
 </script>

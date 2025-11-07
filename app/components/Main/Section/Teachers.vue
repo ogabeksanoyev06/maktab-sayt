@@ -3,6 +3,12 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import { Navigation } from 'swiper/modules'
 
+const { elementRef: sectionRef, isVisible } = useScrollAnimation({
+	threshold: 0.15,
+	rootMargin: '0px 0px -80px 0px',
+	triggerOnce: true
+})
+
 const settings = {
 	modules: [Navigation],
 	spaceBetween: 24,
@@ -19,7 +25,7 @@ const settings = {
 </script>
 
 <template>
-	<section class="md:px-9">
+	<section ref="sectionRef" class="md:px-9 scroll-animate" :class="{ 'animate-in': isVisible }">
 		<div class="bg-black md:rounded-2xl p-6 md:p-[70px] overflow-hidden">
 			<div class="relative container">
 				<img src="/images/teachers-pattern.svg" alt="" class="absolute -top-12 right-[120px] w-[629px] h-[288px] z-0" />

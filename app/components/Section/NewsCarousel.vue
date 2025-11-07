@@ -4,7 +4,7 @@
 		<div class="relative">
 			<div class="container">
 				<Swiper v-bind="settings" class="!overflow-visible">
-					<SwiperSlide v-for="key in 6" :key class="pt-4 pb-8 	!h-full cursor-pointer group">
+					<SwiperSlide v-for="key in 6" :key class="pt-4 pb-8 !h-full cursor-pointer group">
 						<slot />
 					</SwiperSlide>
 				</Swiper>
@@ -37,8 +37,8 @@ import { Navigation } from 'swiper/modules'
 import 'swiper/css'
 
 defineProps<{
-	title: string
-	items: object[]
+	title?: string
+	items?: object[]
 }>()
 
 const settings = {

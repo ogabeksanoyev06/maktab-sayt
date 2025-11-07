@@ -24,10 +24,8 @@ const items = [
 	{
 		label: 'Natijalar va yutuqlar',
 		children: [
-			{ label: 'Maktab yutuqlari', to: '/achievements/school' },
 			{ label: 'Olimpiada natijalari', to: '/achievements/olympiads' },
 			{ label: 'Bitiruvchilar muvaffaqiyatlari', to: '/achievements/alumni' }
-			// { label: 'Sertifikat va diplomlar', to: '/achievements/certificates' }
 		]
 	},
 	{

@@ -1,11 +1,31 @@
-<script setup></script>
+<script setup lang="ts">
+const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({
+	threshold: 0.15,
+	rootMargin: '0px 0px -80px 0px',
+	triggerOnce: true
+})
+
+const { containerRef: videosRef } = useStaggeredScrollAnimation({
+	threshold: 0.15,
+	rootMargin: '0px 0px 0px 0px',
+	triggerOnce: true,
+	staggerDelay: 120,
+	childSelector: '.slide-in-bottom'
+})
+</script>
 
 <template>
-	<section>
+	<section ref="sectionRef" class="fade-in-up" :class="{ 'animate-in': sectionVisible }">
 		<div class="container">
-			<common-section-wrapper class="mb-4 md:mb-8" :title="$t('video_gallery_title')" :subtitle="$t('video_gallery_subtitle')" linkTo="/video-gallery" />
-			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-				<card-video v-for="key in 3" :key />
+			<common-section-wrapper
+				class="mb-4 md:mb-8 text-animate"
+				:class="{ 'animate-in': sectionVisible }"
+				:title="$t('video_gallery_title')"
+				:subtitle="$t('video_gallery_subtitle')"
+				linkTo="/video-gallery"
+			/>
+			<div ref="videosRef" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+				<card-video v-for="key in 3" :key="key" class="slide-in-bottom" />
 			</div>
 		</div>
 	</section>

@@ -40,8 +40,7 @@ const settings = {
 			<div class="container relative z-20 bottom-[60px] lg:bottom-[100px]">
 				<h1 class="text-2xl lg:text-[48px] leading-120 font-extrabold text-white max-w-[600px] mb-3">3-Maktab — Yangi Avlod Yetakchilarini Tarbiyalaydi</h1>
 				<p class="text-base opacity-80 text-white max-w-[600px]">
-					Biz o‘quvchilarga zamonaviy bilim, ma’naviy qadriyatlar va mustaqil fikrlash ko‘nikmalarini beramiz. Har bir bola o‘z iste’dodini namoyon qilib, kelajak yetakchisiga
-					aylanadi.
+					Biz o‘quvchilarga zamonaviy bilim, ma’naviy qadriyatlar va mustaqil fikrlash ko‘nikmalarini beramiz. Har bir bola o‘z iste’dodini namoyon qilib, kelajak yetakchisiga aylanadi.
 				</p>
 			</div>
 

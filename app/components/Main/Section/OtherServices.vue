@@ -1,26 +1,13 @@
-<template>
-	<div class="py-8 md:py-16 grid grid-cols-12 gap-6 relative container">
-		<common-section-wrapper
-			class="col-span-12 md:col-span-5 relative z-1"
-			:title="$t('school_services_title')"
-			:subtitle="$t('school_services_subtitle')"
-			highlighted-title
-			:actions="false"
-		/>
-		<div class="grid md:grid-cols-2 gap-6 lg:gap-10 col-span-12 relative z-1">
-			<div class="flex flex-col gap-6 lg:gap-10">
-				<main-card-other-services-card v-for="(item, key) in schoolServicesFirst" :key="key" :card="item" />
-			</div>
-			<div class="flex flex-col gap-6 lg:gap-10 md:-mt-[150px]">
-				<main-card-other-services-card v-for="(item, key) in schoolServicesSecond" :key="key" :card="item" />
-			</div>
-		</div>
-		<img class="w-[1300px] h-auto absolute top-2.5 left-1/2 -translate-x-1/2 z-0" src="/images/other-services/pattern.svg" alt="School services pattern" />
-	</div>
-</template>
-
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
 const { t } = useI18n()
+
+const { elementRef: sectionRef, isVisible: sectionVisible } = useScrollAnimation({
+	threshold: 0.15,
+	rootMargin: '0px 0px -80px 0px',
+	triggerOnce: true
+})
 
 const schoolServicesFirst = computed(() => [
 	{
@@ -52,3 +39,29 @@ const schoolServicesSecond = computed(() => [
 	}
 ])
 </script>
+
+<template>
+	<div ref="sectionRef" class="py-8 md:py-16 grid grid-cols-12 gap-6 relative container scroll-animate fade-in-up" :class="{ 'animate-in': sectionVisible }">
+		<!-- Title -->
+		<common-section-wrapper
+			class="col-span-12 md:col-span-5 relative z-1 text-animate"
+			:class="{ 'animate-in': sectionVisible }"
+			:title="$t('school_services_title')"
+			:subtitle="$t('school_services_subtitle')"
+			highlighted-title
+			:actions="false"
+		/>
+
+		<div class="grid md:grid-cols-2 gap-6 lg:gap-10 col-span-12 relative z-1">
+			<div class="flex flex-col gap-6 lg:gap-10">
+				<main-card-other-services-card v-for="(item, key) in schoolServicesFirst" :key="key" :card="item" class="fade-in-up" :class="{ 'animate-in': sectionVisible }" />
+			</div>
+
+			<div class="flex flex-col gap-6 lg:gap-10 md:-mt-[150px]">
+				<main-card-other-services-card v-for="(item, key) in schoolServicesSecond" :key="key" :card="item" class="fade-in-up" :class="{ 'animate-in': sectionVisible }" />
+			</div>
+		</div>
+
+		<img class="w-[1300px] h-auto absolute top-2.5 left-1/2 -translate-x-1/2 z-0" src="/images/other-services/pattern.svg" alt="School services pattern" />
+	</div>
+</template>

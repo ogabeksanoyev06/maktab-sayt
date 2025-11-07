@@ -47,6 +47,20 @@ const educationAchievements = [
 	}
 ]
 
+const { elementRef: sectionStatisticsRef, isVisible } = useScrollAnimation({
+	threshold: 0.15,
+	rootMargin: '0px 0px -80px 0px',
+	triggerOnce: true
+})
+
+const { containerRef: cardRef } = useStaggeredScrollAnimation({
+	threshold: 0.15,
+	rootMargin: '0px 0px 0px 0px',
+	triggerOnce: true,
+	staggerDelay: 80,
+	childSelector: '.slide-in-bottom'
+})
+
 const counters = schoolStats.map((item) => useCounter(item.number, 2000))
 const ieltsCounters = educationAchievements.map((item) => useCounter(item.number, 2000))
 const hasAnimated = ref(false)
@@ -55,7 +69,6 @@ const sectionRef = ref<HTMLElement>()
 
 onMounted(() => {
 	if (!sectionRef.value) return
-
 	const observer = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
@@ -84,9 +97,9 @@ onMounted(() => {
 <template>
 	<div ref="sectionRef" class="bg-[linear-gradient(180deg,_#FFF_0%,_#F5F7FA_100%)] py-4 md:py-8">
 		<div class="bg-[url('/images/home/statistics.webp')] bg-cover bg-center bg-fixed bg-no-repeat pt-10 md:pt-20 pb-10 md:pb-[88px]">
-			<div class="container">
+			<div class="container" ref="sectionStatisticsRef">
 				<common-section-wrapper
-					class="mb-6 md:mb-9"
+					class="mb-6 md:mb-9 text-animate"
 					wrapperClass="!items-center !text-center"
 					title-class="!text-white"
 					subtitle-class="!text-white"
@@ -94,9 +107,10 @@ onMounted(() => {
 					:subtitle="$t('statistics_subtitle')"
 					highlighted-title
 					:actions="false"
+					:class="{ 'animate-in': isVisible }"
 				/>
-				<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-					<div v-for="(item, index) in schoolStats" :key="index" class="flex flex-col gap-14 p-4 md:p-6 rounded md:rounded-[20px] bg-black/10 backdrop-blur">
+				<div ref="cardRef" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+					<div v-for="(item, index) in schoolStats" :key="index" class="flex flex-col gap-14 p-4 md:p-6 rounded md:rounded-[20px] bg-black/10 backdrop-blur slide-in-bottom">
 						<img :src="item.img" :alt="$t(item.title)" class="size-12 md:size-16 object-contain" />
 						<div class="flex flex-col gap-1">
 							<h3 class="text-4xl md:text-[44px] font-extrabold leading-130 text-white">{{ counters[index]?.formattedCount.value || '0' }}{{ item.suffix }}</h3>
@@ -104,7 +118,7 @@ onMounted(() => {
 						</div>
 					</div>
 					<div class="bg-white/10 w-[calc(100%-40px)] mx-5 h-px col-span-2 md:col-span-4"></div>
-					<div v-for="(item, index) in educationAchievements" :key="index" class="flex flex-col gap-14 p-4 md:p-6 rounded md:rounded-[20px] bg-black/10 backdrop-blur">
+					<div v-for="(item, index) in educationAchievements" :key="index" class="flex flex-col gap-14 p-4 md:p-6 rounded md:rounded-[20px] bg-black/10 backdrop-blur slide-in-bottom">
 						<h3 class="text-4xl md:text-[44px] font-extrabold leading-130 text-white">{{ ieltsCounters[index]?.formattedCount.value || '0' }}{{ item.suffix }}</h3>
 						<p class="text-sm md:text-base font-normal leading-140 text-white">{{ $t(item.title) }}</p>
 					</div>
