@@ -2,7 +2,7 @@
 	<div id="main-header" class="w-full !fixed top-0 z-50">
 		<LayoutHeaderMid :menus="items" :openMenu="fullMenu" @open-menu="openMenu" :isTransparent="isTransparent" />
 		<transition name="reverse-menu">
-			<LayoutHeaderFullMenu v-if="fullMenu" :menus="items" :is-full-menu="fullMenu" />
+			<LayoutHeaderFullMenu v-if="fullMenu" @close-menu="fullMenu = false" :menus="items" :is-full-menu="fullMenu" />
 		</transition>
 	</div>
 </template>

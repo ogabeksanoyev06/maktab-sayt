@@ -1,5 +1,17 @@
 <script setup>
+// Reactive data
+const loading = ref(true)
+const error = ref(null)
+const article = ref(null)
+
+// i18n composable
 const { t } = useI18n()
+
+// Get route params
+const route = useRoute()
+const slug = computed(() => route.query.slug)
+
+// Methods
 
 const breadcrumbItems = computed(() => [
 	{
@@ -11,6 +23,19 @@ const breadcrumbItems = computed(() => [
 		path: ''
 	}
 ])
+
+// SEO
+useSeoMeta({
+	title: () => (article.value ? `${article.value.title} - ADAM Healthcare Blog` : 'Article - ADAM Healthcare Blog'),
+	description: () => (article.value ? article.value.description.replace(/<[^>]*>/g, '').substring(0, 160) : 'Read the latest healthcare insights and news.'),
+	ogTitle: () => (article.value ? article.value.title : 'Article - ADAM Healthcare Blog'),
+	ogDescription: () => (article.value ? article.value.description.replace(/<[^>]*>/g, '').substring(0, 160) : 'Read the latest healthcare insights and news.'),
+	ogImage: () => article.value?.featured_image_url || '/images/og-image.svg',
+	ogUrl: () => `https://adam.shifo24.com/blog-slug?slug=${slug.value}`,
+	twitterTitle: () => (article.value ? article.value.title : 'Article - ADAM Healthcare Blog'),
+	twitterDescription: () => (article.value ? article.value.description.replace(/<[^>]*>/g, '').substring(0, 160) : 'Read the latest healthcare insights and news.'),
+	twitterImage: () => article.value?.featured_image_url || '/images/og-image.svg'
+})
 </script>
 
 <template>

@@ -1,0 +1,46 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="white"/>
+  
+  <!-- Background pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f0f0f0" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Main content area -->
+  <rect x="100" y="100" width="1000" height="430" rx="20" fill="white" stroke="#e5e5e5" stroke-width="2"/>
+  
+  <!-- Logo -->
+  <g transform="translate(425, 200) scale(3, 3)">
+    <path d="M83.7856 28V0H90.411L98.18 14.8676H98.2589L105.949 0H112.614V28H106.067V12.5803H105.988L100.31 22.8338H96.0899L90.411 12.5408H90.2927V28H83.7856Z" fill="black"/>
+    <path d="M54.0713 28L64.3642 0H70.6741L80.9276 28H74.0657L72.4093 22.9521H62.629L60.9727 28H54.0713ZM64.4037 17.431H70.6741L67.5586 7.9662H67.4797L64.4037 17.431Z" fill="black"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M39.3727 0H29.6713L29.6709 5.87606H39.5305C43.8291 5.87606 47.0234 9.34648 47.0234 14.0394C47.0234 18.5746 43.8685 22.1239 39.0572 22.1239H29.6713V28H39.491C48.5615 28 53.9248 22.2817 53.9248 14.0394C53.9248 5.75775 48.246 0 39.3727 0Z" fill="black"/>
+    <path d="M43.1096 13.9973C43.1096 16.5276 41.0585 18.5787 38.5282 18.5787C35.998 18.5787 33.9468 16.5276 33.9468 13.9973C33.9468 11.4671 35.998 9.41589 38.5282 9.41589C41.0585 9.41589 43.1096 11.4671 43.1096 13.9973Z" fill="#12C09E"/>
+    <path d="M0 28L10.293 0H16.6028L26.8563 28H19.9944L18.338 22.9521H8.55775L6.90141 28H0ZM10.3324 17.431H16.6028L13.4873 7.9662H13.4085L10.3324 17.431Z" fill="black"/>
+  </g>
+
+  <!-- Title text -->
+  <text x="600" y="350" text-anchor="middle" font-family="Inter, sans-serif" font-size="48" font-weight="700" fill="#111827">
+    ADAM Healthcare
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="400" text-anchor="middle" font-family="Inter, sans-serif" font-size="24" font-weight="400" fill="#6B7280">
+    Healthcare Installment Platform
+  </text>
+
+  <!-- Tagline -->
+  <text x="600" y="440" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="400" fill="#9CA3AF">
+    Making healthcare affordable with BNPL
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="200" cy="150" r="8" fill="#12C09E" opacity="0.3"/>
+  <circle cx="1000" cy="480" r="12" fill="#12C09E" opacity="0.2"/>
+  <circle cx="150" cy="500" r="6" fill="#12C09E" opacity="0.4"/>
+  <circle cx="1050" cy="200" r="10" fill="#12C09E" opacity="0.25"/>
+</svg>
+
