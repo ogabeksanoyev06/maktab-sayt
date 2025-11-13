@@ -1,17 +1,12 @@
 <script setup>
-// Reactive data
 const loading = ref(true)
 const error = ref(null)
 const article = ref(null)
 
-// i18n composable
 const { t } = useI18n()
 
-// Get route params
 const route = useRoute()
 const slug = computed(() => route.query.slug)
-
-// Methods
 
 const breadcrumbItems = computed(() => [
 	{
@@ -24,17 +19,18 @@ const breadcrumbItems = computed(() => [
 	}
 ])
 
-// SEO
 useSeoMeta({
-	title: () => (article.value ? `${article.value.title} - ADAM Healthcare Blog` : 'Article - ADAM Healthcare Blog'),
-	description: () => (article.value ? article.value.description.replace(/<[^>]*>/g, '').substring(0, 160) : 'Read the latest healthcare insights and news.'),
-	ogTitle: () => (article.value ? article.value.title : 'Article - ADAM Healthcare Blog'),
-	ogDescription: () => (article.value ? article.value.description.replace(/<[^>]*>/g, '').substring(0, 160) : 'Read the latest healthcare insights and news.'),
-	ogImage: () => article.value?.featured_image_url || '/images/og-image.svg',
-	ogUrl: () => `https://adam.shifo24.com/blog-slug?slug=${slug.value}`,
-	twitterTitle: () => (article.value ? article.value.title : 'Article - ADAM Healthcare Blog'),
-	twitterDescription: () => (article.value ? article.value.description.replace(/<[^>]*>/g, '').substring(0, 160) : 'Read the latest healthcare insights and news.'),
-	twitterImage: () => article.value?.featured_image_url || '/images/og-image.svg'
+	title: () => (article.value ? `${article.value.title} - 3-sonli umumiy o‘rta ta’lim maktabi` : 'Yangilik - 3-sonli umumiy o‘rta ta’lim maktabi'),
+	description: () =>
+		article.value ? article.value.description.replace(/<[^>]*>/g, '').substring(0, 160) : '3-sonli umumiy o‘rta ta’lim maktabidagi yangiliklar, e’lonlar va tadbirlar.',
+	ogTitle: () => (article.value ? article.value.title : 'Yangilik - 3-sonli umumiy o‘rta ta’lim maktabi'),
+	ogDescription: () =>
+		article.value ? article.value.description.replace(/<[^>]*>/g, '').substring(0, 160) : '3-sonli umumiy o‘rta ta’lim maktabidagi eng so‘nggi yangiliklar bilan tanishing.',
+	ogImage: () => article.value?.featured_image_url || '/images/3-maktab/og-news.jpg',
+	ogUrl: () => `https://3-maktab.uz/news-slug?slug=${slug.value}`,
+	twitterTitle: () => (article.value ? article.value.title : 'Yangilik - 3-sonli umumiy o‘rta ta’lim maktabi'),
+	twitterDescription: () => (article.value ? article.value.description.replace(/<[^>]*>/g, '').substring(0, 160) : '3-sonli umumiy o‘rta ta’lim maktabidagi yangilik va tadbirlar.'),
+	twitterImage: () => article.value?.featured_image_url || '/images/3-maktab/og-news.jpg'
 })
 </script>
 

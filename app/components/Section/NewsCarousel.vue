@@ -31,20 +31,19 @@
 	</section>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation } from 'swiper/modules'
 import 'swiper/css'
 
-defineProps<{
-	title?: string
-	items?: object[]
-}>()
+defineProps({
+	title: String,
+	items: Array
+})
 
 const settings = {
 	spaceBetween: 10,
 	slidesPerView: 4,
-	// centeredSlides: true,
 	navigation: {
 		nextEl: '.slider-button-next',
 		prevEl: '.slider-button-prev'

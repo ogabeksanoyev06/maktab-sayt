@@ -105,7 +105,7 @@ const scrollToAbout = () => {
 	}
 }
 
-const breadcrumbItems = [
+const breadcrumbItems = computed(() => [
 	{
 		name: t('about_us.page_title'),
 		path: '/about-us'
@@ -114,7 +114,7 @@ const breadcrumbItems = [
 		name: t('about_us.green_initiatives'),
 		path: ''
 	}
-]
+])
 </script>
 
 <template>
@@ -154,9 +154,7 @@ const breadcrumbItems = [
 			tadbirlari hamda chiqindilarni kamaytirish tashabbuslarigacha bo‘lgan sa’y-harakatlarimiz ushbu suratlarda aks etgan. Har bir qadamimiz sayyoramizning sog‘lom bo‘lishiga va
 			yanada barqaror jamiyat qurishga hissa qo‘shadi.
 		</article>
-		<div>
-			<SectionGalleryCarousel :items="items" />
-		</div>
+		<SectionGalleryCarousel :items="items" />
 	</section>
 	<SectionNewsCarousel title="Maktabdagi barqarorlik yangiliklari">
 		<CardNews />

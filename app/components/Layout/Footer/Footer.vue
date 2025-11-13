@@ -1,6 +1,12 @@
 <script setup>
 const { t } = useI18n()
 
+const active = ref(null)
+
+const toggleAccordion = (index) => {
+	active.value = active.value === index ? null : index
+}
+
 const items = [
 	{
 		label: 'Maktab haqida',
@@ -59,8 +65,27 @@ const items = [
 		<section class="bg-[linear-gradient(110deg,_#005EFE_0.88%,_#003898_100.96%)] md:pt-10 relative overflow-hidden z-10">
 			<div class="container max-md:px-0 pb-6">
 				<nav class="grid grid-cols-1 lg:grid-cols-4 lg:gap-5">
-					<div v-for="(item, key) in items" :key>
-						<h3 class="text-base lg:text-2xl font-extrabold duration-200 lg:mb-5 text-white">{{ item.label }}</h3>
+					<div class="py-4 border-b border-border/20" v-for="(item, index) in items" :key="index">
+						<div class="flex items-center justify-between lg:mb-5" @click="toggleAccordion(index)">
+							<h3 class="text-base lg:text-2xl !leading-140 font-extrabold text-white">{{ item.label }}</h3>
+							<span class="flex lg:hidden">
+								<Icon name="lucide:chevron-right" class="text-white !leading-140 transition-300" :class="active === index ? '-rotate-90' : ''" />
+							</span>
+						</div>
+						<UIAccordion :show="active === index" class="lg:hidden" :headerClass="['!p-0 hidden']">
+							<template #body>
+								<ul class="space-y-3 px-2 py-2 lg:px-0 lg:py-0">
+									<li v-for="(link, i) in item.children" :key="i" class="group">
+										<a v-if="link.link" :href="link.link" target="_blank" rel="noopener noreferrer" class="text-sm md:text-base lg:text-lg text-white/80 transition-300 hover:text-white">
+											{{ link.label }}
+										</a>
+										<nuxt-link-locale v-else :to="link.to" class="text-sm md:text-base lg:text-lg text-white/80 transition-300 hover:text-white">
+											{{ link.label }}
+										</nuxt-link-locale>
+									</li>
+								</ul>
+							</template>
+						</UIAccordion>
 						<ul class="hidden lg:block space-y-3">
 							<li v-for="(link, i) in item.children" :key="i" class="group">
 								<a v-if="link.link" :href="link.link" target="_blank" rel="noopener noreferrer" class="text-sm md:text-base lg:text-lg text-white/80 transition-300 hover:text-white">

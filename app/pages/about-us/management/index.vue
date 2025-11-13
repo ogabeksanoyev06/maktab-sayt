@@ -1,7 +1,7 @@
 <script setup>
 const { t } = useI18n()
 
-const breadcrumbItems = [
+const breadcrumbItems = computed(() => [
 	{
 		name: t('about_us.page_title'),
 		path: '/about-us'
@@ -10,7 +10,7 @@ const breadcrumbItems = [
 		name: t('management'),
 		path: ''
 	}
-]
+])
 </script>
 
 <template>

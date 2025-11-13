@@ -38,20 +38,18 @@ const breadcrumbItems = [
 	}
 ]
 
-// SEO - Dynamic based on language
 useSeoMeta({
-	title: computed(() => getNewsSeo(locale.value).title),
-	description: computed(() => getNewsSeo(locale.value).description),
-	ogTitle: computed(() => getNewsSeo(locale.value).ogTitle),
-	ogDescription: computed(() => getNewsSeo(locale.value).ogDescription),
+	title: computed(() => getNewsSeo(t).title),
+	description: computed(() => getNewsSeo(t).description),
+	ogTitle: computed(() => getNewsSeo(t).ogTitle),
+	ogDescription: computed(() => getNewsSeo(t).ogDescription),
 	ogImage: '/images/og-image.svg',
 	ogUrl: 'https://3-maktab.uz/news',
-	twitterTitle: computed(() => getNewsSeo(locale.value).twitterTitle),
-	twitterDescription: computed(() => getNewsSeo(locale.value).twitterDescription),
+	twitterTitle: computed(() => getNewsSeo(t).twitterTitle),
+	twitterDescription: computed(() => getNewsSeo(t).twitterDescription),
 	twitterImage: '/images/og-image.svg'
 })
 
-// Structured data for News page
 useHead({
 	script: [
 		{

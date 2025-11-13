@@ -1,7 +1,26 @@
-<script setup></script>
+<script setup>
+const { t } = useI18n()
+
+const breadcrumbItems = computed(() => [
+	{
+		name: t('about_us.page_title'),
+		path: '/about-us'
+	},
+	{
+		name: t('management'),
+		path: '/management'
+	},
+	{
+		name: 'Usmonov Otabek Sanoyevich',
+		path: ''
+	}
+])
+</script>
 
 <template>
 	<div>
+		<UIBreadcrumb :routes="breadcrumbItems" />
+
 		<div class="container">
 			<h1 class="title-style mt-3 mb-3 md:mb-6">Usmonov Otabek</h1>
 			<div class="flex md:flex-row flex-col gap-2 md:gap-5 w-full">

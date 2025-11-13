@@ -1,6 +1,6 @@
 <template>
-	<div :class="['cursor-pointer', wrapperClass]">
-		<div @click="$emit('toggle')" class="w-full px-4 py-2">
+	<div :class="['cursor-pointer', wrapperClass]" class="w-full">
+		<div @click="$emit('toggle')" :class="['w-full px-4 py-4', headerClass]">
 			<slot name="header"></slot>
 		</div>
 
@@ -15,7 +15,8 @@
 <script setup>
 defineProps({
 	show: Boolean,
-	wrapperClass: [String, Array]
+	wrapperClass: [String, Array],
+	headerClass: [String, Array]
 })
 
 const body = ref(null)
