@@ -1,6 +1,6 @@
 .glass-card {
-	backdrop-filter: blur(3px);
-	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
 	background: #ffffff0d;
 	border: 1px solid hsla(0, 0%, 100%, 0.3);
 	box-shadow:
@@ -78,7 +78,6 @@
 		line-height: 2rem;
 	}
 }
-
 @media (min-width: 768px) {
 	.title-style {
 		font-size: 32px;

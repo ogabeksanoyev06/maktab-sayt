@@ -16,8 +16,8 @@ body {
 }
 
 .glass-card {
-	backdrop-filter: blur(3px);
-	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
 	background: #ffffff0d;
 	border: 1px solid hsla(0, 0%, 100%, 0.1);
 	box-shadow:
@@ -96,11 +96,4 @@ body {
 	to {
 		opacity: 1;
 	}
-}
-
-.container-wrapper {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	max-width: 1536px;
 }

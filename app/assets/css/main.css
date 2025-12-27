@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "@nuxt/ui";
 @import "../fonts/stylesheet.css";
 @import "./transition.css";
 @import "./common.css";

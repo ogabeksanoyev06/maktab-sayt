@@ -64,7 +64,7 @@ const bgColor = {
 		class="flex items-center fixed w-full top-0 z-10 transition-all duration-300"
 		:class="[y > 100 ? 'h-16 md:h-[72px] shadow-[0_15px_40px_0_#1C23291A]' : 'h-20 md:h-[100px]', bgColor[theme]]"
 	>
-		<div class="container-wrapper">
+		<div class="container">
 			<div class="container flex items-center justify-between">
 				<nuxt-link-locale to="/">
 					<img :key="theme" :src="`/images/header/logo${theme !== 'white' ? '-white' : ''}.svg`" alt="logo" class="w-[98px] h-11" />
@@ -76,7 +76,13 @@ const bgColor = {
 						<!-- Media dropdown -->
 						<layout-header-media-dropdown v-else-if="link.childKey === 'media'" :theme />
 						<!-- Other links -->
-						<nuxt-link-locale v-else :to="link.route" class="py-1 px-2.5 rounded-full transition-all duration-300 font-medium leading-130 text-sm hover:text-blue border border-transparent flex items-center gap-0.5" :active-class="theme !== 'white' ? '!bg-white/10 !text-white !border-white/20' : '!bg-[#0154F8]/10 !text-blue !border-[#0154F8]/20'" :class="theme !== 'white' ? 'text-white' : 'text-gray-6'">
+						<nuxt-link-locale
+							v-else
+							:to="link.route"
+							class="py-1 px-2.5 rounded-full transition-all duration-300 font-medium leading-130 text-sm hover:text-blue border border-transparent flex items-center gap-0.5"
+							:active-class="theme !== 'white' ? '!bg-white/10 !text-white !border-white/20' : '!bg-[#0154F8]/10 !text-blue !border-[#0154F8]/20'"
+							:class="theme !== 'white' ? 'text-white' : 'text-gray-6'"
+						>
 							{{ link.title }}
 						</nuxt-link-locale>
 					</template>

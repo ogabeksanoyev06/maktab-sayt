@@ -1,4 +1,4 @@
-// import tailwindcss from '@tailwindcss/vite'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
 	compatibilityDate: '2025-07-15',
@@ -18,8 +18,7 @@ export default defineNuxtConfig({
 				autoImports: ['defineStore', ['defineStore', 'definePiniaStore']]
 			}
 		],
-		'@nuxt/icon',
-		'@nuxt/ui'
+		'@nuxt/icon'
 	],
 	i18n: {
 		locales: [
@@ -51,9 +50,9 @@ export default defineNuxtConfig({
 		}
 	},
 
-	// vite: {
-	// 	plugins: [tailwindcss()]
-	// },
+	vite: {
+		plugins: [tailwindcss()]
+	},
 	icon: {
 		size: '20px',
 		serverBundle: {
