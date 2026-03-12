@@ -18,12 +18,12 @@
 		<div class="flex flex-col gap-2.5">
 			<UIMarquee :gap="'10px'" :repeat="10" :pause-on-hover="true" :overlay="false" class="mx-auto">
 				<a v-for="(item, key) in 10" :key href="#" target="_blank" class="block w-[195px] h-[261px] flex-shrink-0 aspect-[65/87] group overflow-hidden rounded">
-					<UIImage alt="Instagram post" class="w-full h-full" image-class="transform transition-transform duration-300 group-hover:scale-110" src="/images/user.png" />
+					<UIImage alt="Instagram post" class="w-full h-full" image-class="transform transition-transform duration-300 group-hover:scale-110" src="/images/image.jpg" />
 				</a>
 			</UIMarquee>
 			<UIMarquee :gap="'10px'" :repeat="10" :pause-on-hover="true" :overlay="false" reverse class="mx-auto">
 				<a v-for="(item, key) in 10" :key href="#" target="_blank" class="block w-[195px] h-[261px] flex-shrink-0 aspect-[65/87] group overflow-hidden rounded">
-					<UIImage alt="Instagram post" class="w-full h-full" image-class="transform transition-transform duration-300 group-hover:scale-110" src="/images/user.png" />
+					<UIImage alt="Instagram post" class="w-full h-full" image-class="transform transition-transform duration-300 group-hover:scale-110" src="/images/image.jpg" />
 				</a>
 			</UIMarquee>
 		</div>

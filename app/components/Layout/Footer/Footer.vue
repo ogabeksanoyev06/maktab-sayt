@@ -147,7 +147,7 @@ const items = [
 							<Icon name="lucide-phone" class="text-white" />
 							<p class="text-white font-medium group-hover:!text-red duration-300">+998712070032</p>
 						</a>
-						<a href="mailto:info@tmci.uz" class="flex gap-2 items-center group">
+						<a href="mailto:info@maktab.uz" class="flex gap-2 items-center group">
 							<Icon name="lucide-mail" class="text-white" />
 							<p class="text-white font-medium group-hover:!text-red duration-300">info@Bux3-maktab.uz</p>
 						</a>

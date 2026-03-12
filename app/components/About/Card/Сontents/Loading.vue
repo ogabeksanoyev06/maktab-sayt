@@ -12,8 +12,8 @@
 				<article class="grid gap-3 mb-3">
 					<h3 class="text-dark text-xl md:text-2.5xl font-medium">Chiqindilarni ajratish tashabbusi</h3>
 					<p class="text-dark leading-140">
-						TMC Institute ekologik barqarorlikka sodiq qolgan holda, Yashil Kampus tashabbuslari doirasida chiqindilarni ajratish tizimini joriy etdi. Chiqindi qutilari qogoz, plastmassa
-						va boshqa chiqindilar uchun alohida ajratilgan. Bu tashabbus qayta ishlashni ragbatlantirib, ifloslanishni kamaytiradi hamda ekologik masuliyatni oshiradi. Tori chiqindi
+						3-maktab ekologik barqarorlikka sodiq qolgan holda, Yashil Kampus tashabbuslari doirasida chiqindilarni ajratish tizimini joriy etdi. Chiqindi qutilari qogoz, plastmassa va
+						boshqa chiqindilar uchun alohida ajratilgan. Bu tashabbus qayta ishlashni ragbatlantirib, ifloslanishni kamaytiradi hamda ekologik masuliyatni oshiradi. Tori chiqindi
 						boshqaruvi atrof-muhitga zarar yetkazishni kamaytiradi, kampusni yanada toza qiladi va global barqarorlik maqsadlariga mos keladi. Talabalar va xodimlarning ushbu tizimga
 						faol jalb etilishi ekologik barqaror kelajak sari muhim qadamdir. Bugun qilingan kichik harakatlar ertangi kun uchun katta ahamiyat kasb etadi.
 					</p>

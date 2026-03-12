@@ -91,12 +91,7 @@ function afterLeave(el) {
 				<LayoutHeaderBurger v-model="openMenu" :isTransparent="isTransparent" />
 				<NuxtLink to="/">
 					<Transition name="fade-sm" mode="out-in">
-						<img
-							:key="isTransparent"
-							class="h-10 lg:h-12 object-cover"
-							:src="`/svg/logo/${y > 80 || showChildren ? 'multicolor' : isTransparent ? 'white' : 'multicolor'}.svg`"
-							alt="Logo"
-						/>
+						<img :key="isTransparent" class="h-10 lg:h-14 object-cover" src="/svg/logo/logo-uz.png" alt="Logo" />
 					</Transition>
 				</NuxtLink>
 				<div class="hidden lg:flex relative">

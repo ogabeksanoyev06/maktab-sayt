@@ -14,11 +14,15 @@
 		<div class="min-w-0 flex-1 flex flex-col p-4 sm:p-6">
 			<div class="flex items-center gap-2 mb-2">
 				<UIBadge variant="outline">Dunyo yangiliklari</UIBadge>
-				<span class="text-sm text-muted-foreground"> Apr 23, 2021 </span>
+				<span class="text-sm text-muted-foreground"> Fev 28, 2026 </span>
 			</div>
-			<h2 class="text-base md:text-xl text-pretty font-semibold line-clamp-2 !leading-130">Rossiya–Ukraina urushi “teng kurash” bosqichiga o‘tyaptimi?</h2>
+			<h2 class="text-base md:text-xl text-pretty font-semibold line-clamp-2 !leading-130">
+				Startap ekotizimini rivojlantirish bo‘yicha Muvofiqlashtiruvchi kengashning navbatdagi yig‘ilishi bo‘lib o‘tdi
+			</h2>
 			<div class="mt-1 text-sm !leading-130 md:text-base text-pretty text-muted-foreground line-clamp-3">
-				Kun.uz'ning jonli efirdagi “Geosiyosat” dasturida siyosiy tahlilchilar Rossiya–Ukraina urushining borishidagi so‘nggi tendensiyalar yuzasidan munozaraga kirishdi.
+				Joriy yilning 7-mart kuni Toshkent shahridagi Yoshlar ijod saroyida startap ekotizimini rivojlantirish bo‘yicha Muvofiqlashtiruvchi kengashning navbatdagi yig‘ilishi bo‘lib
+				o‘tdi. Tadbir O‘zbekiston Respublikasi Prezidenti Administratsiyasi bilan hamkorlikda O‘zbekiston Respublikasi Iqtisodiyot va moliya vazirligi, Raqamli texnologiyalar vazirligi
+				hamda Yoshlar ishlari agentligi tomonidan tashkil etildi.
 			</div>
 		</div>
 	</NuxtLinkLocale>

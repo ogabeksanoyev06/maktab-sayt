@@ -15,9 +15,9 @@
 					<img alt="Dayana Xalikova" class="size-6 md:size-10" src="https://tmci.uz/images/quote.svg" />
 				</div>
 				<p class="text-sm">
-					TMCda talaba bolish menga oqishni haqiqiy ish tajribasi bilan birlashtirishdan tortib Singapurdagi kampusga tashrif buyurishgacha bolgan koplab ajoyib imkoniyatlarni taqdim
-					etdi. Bu yerdagi ilmiy faoliyatim davomida hayotimdagi eng tasirli insonlardan biri bolib qoladigan ustozlardan saboq olish baxtiga muyassar boldim. Shu tort yil ichida
-					orttirgan dostligim maktabni bitirganimdan keyin ham uzoq vaqt saqlab qoladigan eng qimmatli aloqalarimdan biridir.
+					3-maktabda o'qish haqiqiy ish tajribasi bilan birlashtirishdan tortib Singapurdagi kampusga tashrif buyurishgacha bolgan koplab ajoyib imkoniyatlarni taqdim etdi. Bu yerdagi
+					ilmiy faoliyatim davomida hayotimdagi eng tasirli insonlardan biri bolib qoladigan ustozlardan saboq olish baxtiga muyassar boldim. Shu tort yil ichida orttirgan dostligim
+					maktabni bitirganimdan keyin ham uzoq vaqt saqlab qoladigan eng qimmatli aloqalarimdan biridir.
 				</p>
 			</div>
 		</div>
